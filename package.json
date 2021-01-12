@@ -1,0 +1,13 @@
+{
+  "name": "oxd",
+  "version": "1.0.0",
+  "license": "GPL-3.0",
+  "private": true,
+  "workspaces": [
+    "components",
+    "storybook"
+  ],
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^4.1.0"
+  }
+}
