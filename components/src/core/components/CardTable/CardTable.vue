@@ -107,8 +107,6 @@ export default defineComponent({
       this.$emit('update:selected', state);
     },
     selected(state) {
-      console.log(this.items);
-      console.log(state === this.checkedItems);
       if (state !== this.checkedItems) {
         this.checkedItems = state;
       }
