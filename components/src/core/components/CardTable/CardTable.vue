@@ -102,8 +102,7 @@ export default defineComponent({
 
   watch: {
     checkedItems(state) {
-      this.selectedAll =
-        state.length === this.items.length && this.items.length !== 0;
+      this.selectedAll = state.length === this.items.length;
       this.$emit('update:selected', state);
     },
   },
