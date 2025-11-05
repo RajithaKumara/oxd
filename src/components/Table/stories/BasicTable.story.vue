@@ -22,8 +22,8 @@
 <template>
   <oxd-table>
     <colgroup>
-      <col style="width: 20%" />
-      <col style="width: 50%" />
+      <col style="width: 20%">
+      <col style="width: 50%">
     </colgroup>
     <oxd-thead>
       <oxd-tr>
@@ -33,16 +33,23 @@
     </oxd-thead>
 
     <oxd-tbody>
-      <oxd-tr v-for="item in items" :key="item" @click="onClick(item)($event)">
+      <oxd-tr
+        v-for="item in items"
+        :key="item"
+        @click="onClick(item)($event)"
+      >
         <oxd-td>{{ item.col1 }}</oxd-td>
         <oxd-td>{{ item.col2 }}</oxd-td>
         <oxd-td>
-          <oxd-icon-button name="trash" @click.stop="onBtnClick" />
+          <oxd-icon-button
+            name="trash"
+            @click.stop="onBtnClick"
+          />
         </oxd-td>
       </oxd-tr>
     </oxd-tbody>
 
-    <oxd-tfoot> </oxd-tfoot>
+    <oxd-tfoot />
   </oxd-table>
 </template>
 

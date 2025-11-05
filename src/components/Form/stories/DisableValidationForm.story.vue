@@ -20,14 +20,23 @@
 -->
 
 <template>
-  <oxd-text tag="h5">Disable validation for readonly/disabled</oxd-text>
+  <oxd-text tag="h5">
+    Disable validation for readonly/disabled
+  </oxd-text>
 
   <oxd-divider />
 
-  <oxd-form ref="form" @submit-valid="onSubmit">
+  <oxd-form
+    ref="form"
+    @submit-valid="onSubmit"
+  >
     <oxd-form-row>
       <oxd-input-group class="orangehrm-bottom-space">
-        <oxd-input-field v-model="name" label="Regular" :rules="rules.name" />
+        <oxd-input-field
+          v-model="name"
+          label="Regular"
+          :rules="rules.name"
+        />
       </oxd-input-group>
     </oxd-form-row>
 
@@ -56,7 +65,11 @@
     <oxd-divider />
 
     <oxd-form-actions>
-      <oxd-button display-type="secondary" label="Save" type="submit" />
+      <oxd-button
+        display-type="secondary"
+        label="Save"
+        type="submit"
+      />
     </oxd-form-actions>
   </oxd-form>
 

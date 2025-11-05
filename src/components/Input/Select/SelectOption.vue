@@ -20,8 +20,12 @@
 -->
 
 <template>
-  <div role="option" class="oxd-select-option" @mousedown="onClick">
-    <slot></slot>
+  <div
+    role="option"
+    class="oxd-select-option"
+    @mousedown="onClick"
+  >
+    <slot />
   </div>
 </template>
 

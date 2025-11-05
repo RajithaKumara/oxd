@@ -21,10 +21,15 @@
 -->
 
 <template>
-  <oxd-text tag="h5">Grouped Input Example</oxd-text>
+  <oxd-text tag="h5">
+    Grouped Input Example
+  </oxd-text>
 
   <oxd-divider />
-  <oxd-form ref="form" @submit-valid="getFormValues">
+  <oxd-form
+    ref="form"
+    @submit-valid="getFormValues"
+  >
     <oxd-form-row>
       <oxd-input-group
         label="Full Name"
@@ -55,7 +60,10 @@
     <oxd-divider />
 
     <oxd-form-actions>
-      <oxd-button display-type="ghost" label="Cancel" />
+      <oxd-button
+        display-type="ghost"
+        label="Cancel"
+      />
       <oxd-button
         class="orangehrm-left-space"
         display-type="secondary"

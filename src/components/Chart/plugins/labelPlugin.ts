@@ -38,7 +38,12 @@ class Label {
 
   render() {
     if (this._type === 'pie') {
-      const {x, y} = this._element.tooltipPosition(true);
+      const point = this._element.tooltipPosition(true) as {
+        x: number | null | undefined;
+        y: number | null | undefined;
+      };
+      if (point.x == null || point.y == null) return;
+      const {x, y} = point as {x: number; y: number};
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const circumference = (this._element as any).circumference;
       if (circumference < 0.75) return;
@@ -55,10 +60,16 @@ class Label {
       this._ctx.textAlign = 'center';
       this._ctx.textBaseline = 'middle';
       this._ctx.font = "normal 10px 'Nunito Sans', sans-serif";
+      const coords = this._element.getProps(['x', 'y'], true) as {
+        x: number | null | undefined;
+        y: number | null | undefined;
+      };
+      if (coords.x == null || coords.y == null) return;
+      const {x, y} = coords as {x: number; y: number};
       this._ctx.fillText(
         this._value.toFixed(2),
-        this._element.x,
-        this._element.y - 2,
+        x,
+        y - 2,
       );
       this._ctx.restore();
     }

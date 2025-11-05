@@ -44,13 +44,25 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue';
+import {defineComponent, computed, ref} from 'vue';
 import Icon from '@/components/Icon/Icon.vue';
 import Input from '@/components/Input/Input.vue';
 import {parseDate, formatDate} from '@/utils/date';
-import type {ComponentPublicInstance} from 'vue';
+import type {ComponentPublicInstance, ComputedRef, Ref} from 'vue';
 import clickOutsideDirective from '@/directives/click-outside';
 import TimePicker from '@/components/Input/Time/TimePicker.vue';
+
+export interface TimeInputBindings {
+  open: Ref<boolean>;
+  oxdInput: Ref<ComponentPublicInstance | undefined>;
+  timeIconClasses: ComputedRef<Record<string, boolean>>;
+  timeDisplay: ComputedRef<string | null>;
+  onFocusOut: () => void;
+  onTimeInput: (event: Event) => void;
+  toggleDropdown: () => void;
+  openDropdown: () => void;
+  closeDropdown: () => void;
+}
 
 export default defineComponent({
   name: 'OxdTimeInput',
@@ -105,56 +117,69 @@ export default defineComponent({
     'timeselect:closed',
   ],
 
-  data() {
-    return {
-      open: false,
-    };
-  },
+  setup(props, {emit}): TimeInputBindings {
+    const open = ref(false);
+    const oxdInput = ref<ComponentPublicInstance>();
 
-  computed: {
-    timeIconClasses(): object {
-      return {
-        'oxd-time-input--clock': true,
-        '--disabled': this.disabled,
-        '--readonly': this.readonly,
-      };
-    },
-    timeDisplay(): string | null {
-      const parsedDate = parseDate(this.modelValue, 'HH:mm');
+    const timeIconClasses = computed(() => ({
+      'oxd-time-input--clock': true,
+      '--disabled': props.disabled,
+      '--readonly': props.readonly,
+    }));
+
+    const timeDisplay = computed(() => {
+      const parsedDate = parseDate(props.modelValue, 'HH:mm');
       return parsedDate ? formatDate(parsedDate, 'hh:mm a') : null;
-    },
-  },
+    });
 
-  methods: {
-    onFocusOut() {
-      this.open && this.closeDropdown();
-    },
-    onTimeInput($event: Event) {
+    const closeDropdown = () => {
+      if (!open.value) return;
+      open.value = false;
+      emit('timeselect:closed');
+    };
+
+    const openDropdown = () => {
+      if (open.value) return;
+      open.value = true;
+      emit('timeselect:opened');
+    };
+
+    const toggleDropdown = () => {
+      if (props.disabled) return;
+      if (!open.value) {
+        (oxdInput.value as ComponentPublicInstance | undefined)?.$el?.focus?.();
+        openDropdown();
+      } else {
+        closeDropdown();
+      }
+    };
+
+    const onFocusOut = () => {
+      if (open.value) {
+        closeDropdown();
+      }
+    };
+
+    const onTimeInput = ($event: Event) => {
       const input = ($event.target as HTMLInputElement).value;
       const parsedDate = parseDate(input, 'hh:mm a');
-      this.$emit(
+      emit(
         'update:modelValue',
         parsedDate ? formatDate(parsedDate, 'HH:mm') : null,
       );
-    },
-    toggleDropdown() {
-      if (!this.disabled) {
-        if (!this.open) {
-          (this.$refs.oxdInput as ComponentPublicInstance).$el.focus();
-          this.openDropdown();
-        } else {
-          this.closeDropdown();
-        }
-      }
-    },
-    openDropdown() {
-      this.open = true;
-      this.$emit('timeselect:opened');
-    },
-    closeDropdown() {
-      this.open = false;
-      this.$emit('timeselect:closed');
-    },
+    };
+
+    return {
+      open,
+      oxdInput,
+      timeIconClasses,
+      timeDisplay,
+      onFocusOut,
+      onTimeInput,
+      toggleDropdown,
+      openDropdown,
+      closeDropdown,
+    } as TimeInputBindings;
   },
 });
 </script>

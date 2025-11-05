@@ -20,7 +20,10 @@
 -->
 
 <template>
-  <oxd-tab-container v-model="selector" @click-tab="onClickTab">
+  <oxd-tab-container
+    v-model="selector"
+    @click-tab="onClickTab"
+  >
     <oxd-tab-panel
       key="first"
       name="First Tab"
@@ -39,7 +42,11 @@
         of Lorem Ipsum.
       </p>
     </oxd-tab-panel>
-    <oxd-tab-panel key="disabled" disabled="true" name="Disabled Tab">
+    <oxd-tab-panel
+      key="disabled"
+      disabled="true"
+      name="Disabled Tab"
+    >
       <p>This tab is disabled</p>
     </oxd-tab-panel>
     <oxd-tab-panel

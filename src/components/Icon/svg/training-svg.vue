@@ -21,7 +21,11 @@
 
 <template>
   <g transform="matrix(2.207717, 0, 0, 2.207717, -184.898178, -250.331589)">
-    <circle cx="127.712" cy="143.494" r="27.711" />
+    <circle
+      cx="127.712"
+      cy="143.494"
+      r="27.711"
+    />
     <line
       style="
         fill: none;

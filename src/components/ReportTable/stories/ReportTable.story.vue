@@ -29,7 +29,10 @@
       :column-count="6"
     >
       <template #pagination>
-        <oxd-pagination :length="3" :max="10" />
+        <oxd-pagination
+          :length="3"
+          :max="10"
+        />
       </template>
     </oxd-report-table>
   </div>

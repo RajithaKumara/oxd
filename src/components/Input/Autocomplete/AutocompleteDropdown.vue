@@ -20,14 +20,17 @@
 -->
 
 <template>
-  <div role="listbox" class="oxd-autocomplete-dropdown">
+  <div
+    role="listbox"
+    class="oxd-autocomplete-dropdown"
+  >
     <oxd-autocomplete-option v-if="loading">
       {{ t('general.searching', 'Searching...') }}
     </oxd-autocomplete-option>
     <oxd-autocomplete-option v-else-if="empty">
       {{ t('general.no_records_found', 'No records found') }}
     </oxd-autocomplete-option>
-    <slot v-else></slot>
+    <slot v-else />
   </div>
 </template>
 

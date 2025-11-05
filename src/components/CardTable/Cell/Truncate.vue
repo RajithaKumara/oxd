@@ -19,8 +19,14 @@
  -->
 
 <template>
-  <div v-show="item" class="oxd-table-card-cell">
-    <div v-if="showHeader" class="header">
+  <div
+    v-show="item"
+    class="oxd-table-card-cell"
+  >
+    <div
+      v-if="showHeader"
+      class="header"
+    >
       {{ header.title }}
     </div>
     <oxd-text tag="span">

@@ -25,7 +25,7 @@
     :class="{'--active': isActive}"
     @click="openSubmenu"
   >
-    <slot></slot>
+    <slot />
     <transition name="transition-fade-down">
       <ul
         v-if="isActive"
@@ -33,7 +33,7 @@
         role="menu"
         @click.stop="closeSubMenu"
       >
-        <slot name="content"></slot>
+        <slot name="content" />
       </ul>
     </transition>
   </li>

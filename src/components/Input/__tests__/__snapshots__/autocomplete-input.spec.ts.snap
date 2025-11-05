@@ -1,10 +1,10 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`AutocompleteInput.vue > renders OXD Autocomplete Input 1`] = `
-"<div class=\\"oxd-autocomplete-wrapper\\" data-v-1bf18ee7=\\"\\">
-  <div class=\\"oxd-autocomplete-text-input oxd-autocomplete-text-input--active\\" data-v-d82064c7=\\"\\" data-v-1bf18ee7=\\"\\">
-    <div class=\\"oxd-autocomplete-text-input--before\\" data-v-d82064c7=\\"\\"></div><input placeholder=\\"Type for hints...\\" data-v-d82064c7=\\"\\">
-    <div class=\\"oxd-autocomplete-text-input--after\\" data-v-d82064c7=\\"\\">
+"<div data-v-1bf18ee7="" class="oxd-autocomplete-wrapper">
+  <div data-v-d82064c7="" data-v-1bf18ee7="" class="oxd-autocomplete-text-input oxd-autocomplete-text-input--active">
+    <div data-v-d82064c7="" class="oxd-autocomplete-text-input--before"></div><input data-v-d82064c7="" placeholder="Type for hints...">
+    <div data-v-d82064c7="" class="oxd-autocomplete-text-input--after">
       <!--v-if-->
     </div>
   </div>

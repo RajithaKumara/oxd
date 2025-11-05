@@ -33,11 +33,15 @@
     <template #content>
       <!-- Notification items -->
       <span class="oxd-notifdropdown-head"> Alerts Center </span>
-      <hr class="oxd-notifdropdown-divider" />
-      <slot></slot>
-      <hr class="oxd-notifdropdown-divider" />
+      <hr class="oxd-notifdropdown-divider">
+      <slot />
+      <hr class="oxd-notifdropdown-divider">
       <li role="none">
-        <a href="#" role="menuitem" class="oxd-notifdropdown-link --center">
+        <a
+          href="#"
+          role="menuitem"
+          class="oxd-notifdropdown-link --center"
+        >
           Show All Notifications
         </a>
       </li>

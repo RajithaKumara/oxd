@@ -32,10 +32,15 @@
     upgrade-label="Upgrade"
     upgrade-url="https://orangehrm.com"
   >
-    <p class="context-default">slot for context</p>
+    <p class="context-default">
+      slot for context
+    </p>
     <template #topbar-header-right-area>
       <div class="orangehrm-slot-button-container">
-        <a class="orangehrm-slot-button-link" href="https://orangehrm.com">
+        <a
+          class="orangehrm-slot-button-link"
+          href="https://orangehrm.com"
+        >
           <oxd-glass-button
             label="OHRM"
             size="large"
@@ -46,7 +51,7 @@
                 type="svg"
                 name="upgrade"
                 class="orangehrm-slot-button-icon"
-              ></oxd-icon>
+              />
             </template>
           </oxd-glass-button>
         </a>
@@ -54,15 +59,21 @@
     </template>
     <template #user-actions>
       <li role="none">
-        <a href="#" role="menuitem" class="oxd-userdropdown-link"> Logout </a>
+        <a
+          href="#"
+          role="menuitem"
+          class="oxd-userdropdown-link"
+        > Logout </a>
       </li>
     </template>
     <template #nav-actions>
       <oxd-icon-button name="question-lg" />
     </template>
     <template #footer>
-      <p class="context-footer">slot for footer</p>
-      <br />
+      <p class="context-footer">
+        slot for footer
+      </p>
+      <br>
     </template>
   </oxd-layout>
 </template>

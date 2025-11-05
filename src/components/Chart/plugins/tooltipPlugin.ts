@@ -42,6 +42,7 @@ export const OxdPieChartTooltip: Plugin = {
       const totalValue = dataset.reduce((acc, value) => acc + value, 0);
       const percentage = (dataset[activeElement.index] / totalValue) * 100;
       const {x, y} = activeElement.element.tooltipPosition(true);
+      if (x == null || y == null) return;
 
       tooltipEl.id = 'oxd-pie-chart-tooltip';
       tooltipEl.classList.add('oxd-pie-chart-tooltip');

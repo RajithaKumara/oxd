@@ -1,3 +1,3 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`CardTable > TableRow.vue > renders OXD CardTable > TableRow 1`] = `"<div class=\\"oxd-table-row oxd-table-row--with-border oxd-table-row--clickable\\" role=\\"row\\" data-v-4d6254cf=\\"\\"></div>"`;
+exports[`CardTable > TableRow.vue > renders OXD CardTable > TableRow 1`] = `"<div data-v-4d6254cf="" class="oxd-table-row oxd-table-row--with-border oxd-table-row--clickable" role="row"></div>"`;

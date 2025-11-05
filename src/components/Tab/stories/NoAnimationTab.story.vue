@@ -25,7 +25,10 @@
     :animation="false"
     @click-tab="onClickTab"
   >
-    <oxd-tab-panel key="first" name="First Tab">
+    <oxd-tab-panel
+      key="first"
+      name="First Tab"
+    >
       <p>
         <b>First</b> is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -38,7 +41,10 @@
         of Lorem Ipsum.
       </p>
     </oxd-tab-panel>
-    <oxd-tab-panel key="second" name="Second Tab">
+    <oxd-tab-panel
+      key="second"
+      name="Second Tab"
+    >
       <p>
         <b>Second</b> is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -51,7 +57,10 @@
         of Lorem Ipsum.
       </p>
     </oxd-tab-panel>
-    <oxd-tab-panel key="third" name="Third Tab">
+    <oxd-tab-panel
+      key="third"
+      name="Third Tab"
+    >
       <p>
         <b>Third</b> is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever

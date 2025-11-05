@@ -24,7 +24,7 @@
     <transition-group :name="transition">
       <oxd-toast
         v-for="(toast, index) in toasts"
-        :key="toast"
+        :key="`${toast.title}-${index}`"
         v-bind="toast"
         :class="toastClass"
         :style="{zIndex: toasts.length - index}"
@@ -36,9 +36,10 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue';
+import type {PropType} from 'vue';
 import Toast from '@/components/Toast/Toast.vue';
 import {POSITION_BOTTOM, POSITIONS} from './types';
-import type {ToastContainerPositions} from './types';
+import type {ToastContainerPositions, Toast as ToastPayload} from './types';
 
 export default defineComponent({
   name: 'OxdToastContainer',
@@ -49,9 +50,9 @@ export default defineComponent({
 
   props: {
     toasts: {
-      type: Array,
+      type: Array as PropType<ToastPayload[]>,
       required: false,
-      default: () => [],
+      default: () => [] as ToastPayload[],
     },
     transition: {
       type: String,

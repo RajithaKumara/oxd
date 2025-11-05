@@ -21,7 +21,7 @@
 
 <template>
   <thead class="oxd-table-header">
-    <slot></slot>
+    <slot />
   </thead>
 </template>
 

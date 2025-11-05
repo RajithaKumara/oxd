@@ -23,7 +23,10 @@
 <template>
   <oxd-form>
     <oxd-form-row class="orangehrm-bottom-space">
-      <oxd-input-group label="Input Label" message="Validation message....">
+      <oxd-input-group
+        label="Input Label"
+        message="Validation message...."
+      >
         <oxd-input value="Initial Value" />
       </oxd-input-group>
     </oxd-form-row>

@@ -21,7 +21,7 @@
 
 <template>
   <td>
-    <slot></slot>
+    <slot />
   </td>
 </template>
 

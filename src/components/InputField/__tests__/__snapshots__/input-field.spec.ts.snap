@@ -1,26 +1,26 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`InputField.vue > renders OXD InputField 1`] = `
-"<div class=\\"oxd-input-group oxd-input-field-bottom-space\\" data-v-d1b4dd00=\\"\\">
-  <div class=\\"oxd-input-group__label-wrapper\\" data-v-d1b4dd00=\\"\\">
+"<div data-v-d1b4dd00="" class="oxd-input-group oxd-input-field-bottom-space">
+  <div data-v-d1b4dd00="" class="oxd-input-group__label-wrapper">
     <!--v-if-->
     <!--v-if-->
   </div>
-  <div class=\\"\\" data-v-d1b4dd00=\\"\\"><input class=\\"oxd-input oxd-input--active\\" data-v-d06e05c9=\\"\\"></div>
+  <div data-v-d1b4dd00="" class=""><input data-v-d06e05c9="" class="oxd-input oxd-input--active"></div>
   <!--v-if-->
 </div>"
 `;
 
 exports[`InputField.vue > renders OXD InputField type \`file\` 1`] = `
-"<div class=\\"oxd-input-group oxd-input-field-bottom-space\\" data-v-d1b4dd00=\\"\\">
-  <div class=\\"oxd-input-group__label-wrapper\\" data-v-d1b4dd00=\\"\\">
+"<div data-v-d1b4dd00="" class="oxd-input-group oxd-input-field-bottom-space">
+  <div data-v-d1b4dd00="" class="oxd-input-group__label-wrapper">
     <!--v-if-->
     <!--v-if-->
   </div>
-  <div class=\\"\\" data-v-d1b4dd00=\\"\\"><input type=\\"file\\" class=\\"oxd-file-input\\" data-v-1b4b6e0f=\\"\\">
-    <div class=\\"oxd-file-div oxd-file-div--active\\" data-v-1b4b6e0f=\\"\\">
+  <div data-v-d1b4dd00="" class=""><input data-v-1b4b6e0f="" type="file" class="oxd-file-input">
+    <div data-v-1b4b6e0f="" class="oxd-file-div oxd-file-div--active">
       <!--v-if-->
-      <div class=\\"oxd-file-input-div\\" data-v-1b4b6e0f=\\"\\">No file chosen</div><i class=\\"oxd-icon bi-upload oxd-file-input-icon\\" data-v-85cde8ca=\\"\\" data-v-1b4b6e0f=\\"\\"></i>
+      <div data-v-1b4b6e0f="" class="oxd-file-input-div">No file chosen</div><i data-v-85cde8ca="" data-v-1b4b6e0f="" class="oxd-icon bi-upload oxd-file-input-icon"></i>
     </div>
   </div>
   <!--v-if-->
@@ -28,15 +28,15 @@ exports[`InputField.vue > renders OXD InputField type \`file\` 1`] = `
 `;
 
 exports[`InputField.vue > renders OXD InputField type \`file\` with button 1`] = `
-"<div class=\\"oxd-input-group oxd-input-field-bottom-space\\" data-v-d1b4dd00=\\"\\">
-  <div class=\\"oxd-input-group__label-wrapper\\" data-v-d1b4dd00=\\"\\">
+"<div data-v-d1b4dd00="" class="oxd-input-group oxd-input-field-bottom-space">
+  <div data-v-d1b4dd00="" class="oxd-input-group__label-wrapper">
     <!--v-if-->
     <!--v-if-->
   </div>
-  <div class=\\"\\" data-v-d1b4dd00=\\"\\"><input type=\\"file\\" class=\\"oxd-file-input\\" data-v-1b4b6e0f=\\"\\">
-    <div class=\\"oxd-file-div oxd-file-div--active\\" data-v-1b4b6e0f=\\"\\">
-      <div class=\\"oxd-file-button\\" data-v-1b4b6e0f=\\"\\">Browse</div>
-      <div class=\\"oxd-file-input-div\\" data-v-1b4b6e0f=\\"\\">No file chosen</div><i class=\\"oxd-icon bi-upload oxd-file-input-icon\\" data-v-85cde8ca=\\"\\" data-v-1b4b6e0f=\\"\\"></i>
+  <div data-v-d1b4dd00="" class=""><input data-v-1b4b6e0f="" type="file" class="oxd-file-input">
+    <div data-v-1b4b6e0f="" class="oxd-file-div oxd-file-div--active">
+      <div data-v-1b4b6e0f="" class="oxd-file-button">Browse</div>
+      <div data-v-1b4b6e0f="" class="oxd-file-input-div">No file chosen</div><i data-v-85cde8ca="" data-v-1b4b6e0f="" class="oxd-icon bi-upload oxd-file-input-icon"></i>
     </div>
   </div>
   <!--v-if-->
@@ -44,23 +44,23 @@ exports[`InputField.vue > renders OXD InputField type \`file\` with button 1`] =
 `;
 
 exports[`InputField.vue > renders OXD InputField type \`input\` 1`] = `
-"<div class=\\"oxd-input-group oxd-input-field-bottom-space\\" data-v-d1b4dd00=\\"\\">
-  <div class=\\"oxd-input-group__label-wrapper\\" data-v-d1b4dd00=\\"\\">
+"<div data-v-d1b4dd00="" class="oxd-input-group oxd-input-field-bottom-space">
+  <div data-v-d1b4dd00="" class="oxd-input-group__label-wrapper">
     <!--v-if-->
     <!--v-if-->
   </div>
-  <div class=\\"\\" data-v-d1b4dd00=\\"\\"><input class=\\"oxd-input oxd-input--active\\" data-v-d06e05c9=\\"\\"></div>
+  <div data-v-d1b4dd00="" class=""><input data-v-d06e05c9="" class="oxd-input oxd-input--active"></div>
   <!--v-if-->
 </div>"
 `;
 
 exports[`InputField.vue > renders OXD InputField type \`textarea\` 1`] = `
-"<div class=\\"oxd-input-group oxd-input-field-bottom-space\\" data-v-d1b4dd00=\\"\\">
-  <div class=\\"oxd-input-group__label-wrapper\\" data-v-d1b4dd00=\\"\\">
+"<div data-v-d1b4dd00="" class="oxd-input-group oxd-input-field-bottom-space">
+  <div data-v-d1b4dd00="" class="oxd-input-group__label-wrapper">
     <!--v-if-->
     <!--v-if-->
   </div>
-  <div class=\\"\\" data-v-d1b4dd00=\\"\\"><textarea class=\\"oxd-textarea oxd-textarea--active oxd-textarea--resize-vertical\\" data-v-ec75bf0c=\\"\\"></textarea></div>
+  <div data-v-d1b4dd00="" class=""><textarea data-v-ec75bf0c="" class="oxd-textarea oxd-textarea--active oxd-textarea--resize-vertical"></textarea></div>
   <!--v-if-->
 </div>"
 `;

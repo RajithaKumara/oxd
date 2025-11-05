@@ -25,7 +25,7 @@
       display-type="secondary"
       label="Edit All"
       @click="onClickEditall"
-    ></oxd-button>
+    />
   </div>
   <div class="orangehrm-container">
     <oxd-card-table
@@ -37,7 +37,7 @@
       row-decorator="oxd-table-decorator-card"
     />
   </div>
-  <div class="orangehrm-table-footer"></div>
+  <div class="orangehrm-table-footer" />
 </template>
 
 <script>

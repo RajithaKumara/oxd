@@ -20,9 +20,12 @@
 -->
 
 <template>
-  <span :class="classes" :style="style">
+  <span
+    :class="classes"
+    :style="style"
+  >
     {{ label }}
-    <slot></slot>
+    <slot />
   </span>
 </template>
 

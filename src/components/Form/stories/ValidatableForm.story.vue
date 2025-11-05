@@ -21,11 +21,16 @@
 -->
 
 <template>
-  <oxd-text tag="h5">Add Job Category</oxd-text>
+  <oxd-text tag="h5">
+    Add Job Category
+  </oxd-text>
 
   <oxd-divider />
 
-  <oxd-form ref="form" @submit-valid="getFormValues">
+  <oxd-form
+    ref="form"
+    @submit-valid="getFormValues"
+  >
     <oxd-form-row>
       <oxd-input-group class="orangehrm-bottom-space">
         <oxd-input-field
@@ -74,7 +79,10 @@
     <oxd-divider />
 
     <oxd-form-actions>
-      <oxd-button display-type="ghost" label="Cancel" />
+      <oxd-button
+        display-type="ghost"
+        label="Cancel"
+      />
       <oxd-button
         class="orangehrm-left-space"
         display-type="secondary"

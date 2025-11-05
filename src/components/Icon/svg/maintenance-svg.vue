@@ -20,7 +20,10 @@
 -->
 
 <template>
-  <g id="svgg" transform="matrix(1.250106, 0, 0, 1.250106, 0.059988, 0.085129)">
+  <g
+    id="svgg"
+    transform="matrix(1.250106, 0, 0, 1.250106, 0.059988, 0.085129)"
+  >
     <path
       id="path4"
       class="cls-1"

@@ -58,19 +58,19 @@
           <oxd-input-field label="Email" />
         </oxd-form-row>
       </oxd-grid-item>
-      <oxd-grid-item> </oxd-grid-item>
+      <oxd-grid-item />
       <oxd-grid-item>
         <oxd-form-row>
           <oxd-input-field label="Address Street 1" />
         </oxd-form-row>
       </oxd-grid-item>
-      <oxd-grid-item> </oxd-grid-item>
+      <oxd-grid-item />
       <oxd-grid-item>
         <oxd-form-row>
           <oxd-input-field label="Address Street 2" />
         </oxd-form-row>
       </oxd-grid-item>
-      <oxd-grid-item> </oxd-grid-item>
+      <oxd-grid-item />
     </oxd-grid>
   </oxd-form>
 </template>

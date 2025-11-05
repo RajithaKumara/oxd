@@ -23,16 +23,19 @@
   <div class="oxd-table-filter">
     <div class="oxd-table-filter-header">
       <div class="oxd-table-filter-header-title">
-        <oxd-text class="oxd-table-filter-title" tag="h5">
+        <oxd-text
+          class="oxd-table-filter-title"
+          tag="h5"
+        >
           {{ filterTitle }}
         </oxd-text>
       </div>
       <div class="oxd-table-filter-header-options">
         <div class="--toggle">
-          <slot name="toggleOptions"></slot>
+          <slot name="toggleOptions" />
         </div>
         <div class="--export">
-          <slot name="exportOptions"></slot>
+          <slot name="exportOptions" />
         </div>
         <div class="--toggle">
           <oxd-icon-button
@@ -43,8 +46,11 @@
       </div>
     </div>
     <oxd-divider v-show="isActive" />
-    <div v-show="isActive" class="oxd-table-filter-area">
-      <slot></slot>
+    <div
+      v-show="isActive"
+      class="oxd-table-filter-area"
+    >
+      <slot />
     </div>
   </div>
 </template>

@@ -99,9 +99,9 @@ export default defineComponent({
 
   props: {
     modelValue: {
-      type: Array,
+      type: Array as PropType<Option[]>,
       required: false,
-      default: () => [],
+      default: () => [] as Option[],
     },
     disabled: {
       type: Boolean,
@@ -140,7 +140,12 @@ export default defineComponent({
     'update:modelValue',
   ],
 
-  data() {
+  data(): {
+    focused: boolean;
+    loading: boolean;
+    searchTerm: string | null;
+    dropdownOpen: boolean;
+  } {
     return {
       focused: false,
       loading: false,

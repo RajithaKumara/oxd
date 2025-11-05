@@ -22,7 +22,9 @@
 <template>
   <oxd-sheet>
     <div class="orangehrm-header-container">
-      <oxd-text type="card-title">Grid Demo</oxd-text>
+      <oxd-text type="card-title">
+        Grid Demo
+      </oxd-text>
       <div class="orangehrm-select-columns">
         <oxd-select-input
           v-model="cols"
@@ -83,7 +85,10 @@
 
       <oxd-divider />
       <oxd-form-actions>
-        <oxd-button label="Cancel" display-type="ghost" />
+        <oxd-button
+          label="Cancel"
+          display-type="ghost"
+        />
         <oxd-button
           label="Save"
           type="submit"

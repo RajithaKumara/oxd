@@ -21,11 +21,16 @@
 -->
 
 <template>
-  <oxd-text tag="h5">Custom Fields Form</oxd-text>
+  <oxd-text tag="h5">
+    Custom Fields Form
+  </oxd-text>
 
   <oxd-divider />
 
-  <oxd-form ref="form" @submit-valid="getFormValues">
+  <oxd-form
+    ref="form"
+    @submit-valid="getFormValues"
+  >
     <oxd-form-row>
       <div
         v-for="(customField, index) in customFields"
@@ -49,7 +54,11 @@
     <oxd-divider />
 
     <oxd-form-actions>
-      <oxd-button type="button" display-type="ghost" label="Cancel" />
+      <oxd-button
+        type="button"
+        display-type="ghost"
+        label="Cancel"
+      />
       <oxd-button
         class="orangehrm-left-space"
         display-type="secondary"

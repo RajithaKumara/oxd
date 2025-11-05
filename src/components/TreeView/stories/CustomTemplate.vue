@@ -27,7 +27,10 @@
     class="org-structure"
   >
     <template #content="{nodeData}">
-      <oxd-sheet type="pastel-white" class="org-structure-card">
+      <oxd-sheet
+        type="pastel-white"
+        class="org-structure-card"
+      >
         <div class="org-name">
           {{ nodeData.name }}
         </div>

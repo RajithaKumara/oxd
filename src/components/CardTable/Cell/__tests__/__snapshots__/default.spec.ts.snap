@@ -1,18 +1,18 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`CardTable > Cell > Default.vue > should renders OXD CardTable > Cell > Default 1`] = `"<div data-v-a4505f24=\\"\\">Test</div>"`;
+exports[`CardTable > Cell > Default.vue > should renders OXD CardTable > Cell > Default 1`] = `"<div data-v-a4505f24="">Test</div>"`;
 
 exports[`CardTable > Cell > Default.vue > should renders OXD CardTable > Cell > Default with array 1`] = `
-"<div data-v-a4505f24=\\"\\">[
-  \\"Test\\",
-  \\"Array\\"
+"<div data-v-a4505f24="">[
+  "Test",
+  "Array"
   ]</div>"
 `;
 
-exports[`CardTable > Cell > Default.vue > should renders OXD CardTable > Cell > Default with number 1`] = `"<div data-v-a4505f24=\\"\\">2</div>"`;
+exports[`CardTable > Cell > Default.vue > should renders OXD CardTable > Cell > Default with number 1`] = `"<div data-v-a4505f24="">2</div>"`;
 
 exports[`CardTable > Cell > Default.vue > should renders OXD CardTable > Cell > Default with object 1`] = `
-"<div data-v-a4505f24=\\"\\">{
-  \\"test\\": \\"Object\\"
+"<div data-v-a4505f24="">{
+  "test": "Object"
   }</div>"
 `;

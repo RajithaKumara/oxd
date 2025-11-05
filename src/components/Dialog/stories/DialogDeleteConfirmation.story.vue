@@ -21,11 +21,21 @@
 -->
 
 <template>
-  <oxd-icon-button name="trash" with-container @click="onClick" />
+  <oxd-icon-button
+    name="trash"
+    with-container
+    @click="onClick"
+  />
 
-  <oxd-dialog v-if="show" :style="{maxWidth: '450px'}" @update:show="onCancel">
+  <oxd-dialog
+    v-if="show"
+    :style="{maxWidth: '450px'}"
+    @update:show="onCancel"
+  >
     <div class="orangehrm-modal-header">
-      <oxd-text type="card-title">Are you sure?</oxd-text>
+      <oxd-text type="card-title">
+        Are you sure?
+      </oxd-text>
     </div>
     <div class="orangehrm-text-center-align">
       <oxd-text type="card-body">

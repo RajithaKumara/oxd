@@ -20,8 +20,11 @@
 -->
 
 <template>
-  <div class="oxd-table-cell" role="cell">
-    <slot></slot>
+  <div
+    class="oxd-table-cell"
+    role="cell"
+  >
+    <slot />
   </div>
 </template>
 

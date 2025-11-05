@@ -21,8 +21,10 @@
 
 <template>
   <oxd-sheet type="gray-lighten-2">
-    <oxd-text type="card-title">Card Title</oxd-text>
-    <div :style="{width: '100px', height: '100px'}"></div>
+    <oxd-text type="card-title">
+      Card Title
+    </oxd-text>
+    <div :style="{width: '100px', height: '100px'}" />
   </oxd-sheet>
 </template>
 

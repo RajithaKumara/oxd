@@ -28,7 +28,7 @@
     role="presentation"
   >
     <g :fill="iconColor">
-      <slot></slot>
+      <slot />
     </g>
   </svg>
 </template>

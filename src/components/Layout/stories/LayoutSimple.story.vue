@@ -29,18 +29,26 @@
     :brand-banner-src="brandBannerSrc"
     :breadcrumb="breadcrumb"
   >
-    <p class="context-default">slot for context</p>
+    <p class="context-default">
+      slot for context
+    </p>
     <template #user-actions>
       <li role="none">
-        <a href="#" role="menuitem" class="oxd-userdropdown-link"> Logout </a>
+        <a
+          href="#"
+          role="menuitem"
+          class="oxd-userdropdown-link"
+        > Logout </a>
       </li>
     </template>
     <template #nav-actions>
       <oxd-icon-button name="question-lg" />
     </template>
     <template #footer>
-      <p class="context-footer">slot for footer</p>
-      <br />
+      <p class="context-footer">
+        slot for footer
+      </p>
+      <br>
     </template>
   </oxd-layout>
 </template>

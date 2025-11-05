@@ -80,15 +80,30 @@
       </p>
     </oxd-tab-panel>
   </oxd-tab-container>
-  <br />
+  <br>
   <div class="orangehrm-custom-tabs">
-    <input v-model="selector" type="radio" name="contact" value="First Tab" />
+    <input
+      v-model="selector"
+      type="radio"
+      name="contact"
+      value="First Tab"
+    >
     <label>First Tab</label>
 
-    <input v-model="selector" type="radio" name="contact" value="Second Tab" />
+    <input
+      v-model="selector"
+      type="radio"
+      name="contact"
+      value="Second Tab"
+    >
     <label>Second Tab</label>
 
-    <input v-model="selector" type="radio" name="contact" value="Third Tab" />
+    <input
+      v-model="selector"
+      type="radio"
+      name="contact"
+      value="Third Tab"
+    >
     <label>Third Tab</label>
   </div>
 </template>

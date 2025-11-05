@@ -63,7 +63,8 @@ export const OxdBarChartFill: Plugin = {
   beforeDraw: (chart: Chart<'bar'>) => {
     if ((chart.config as ChartConfiguration).type !== 'bar') return;
     const {ctx, scales} = chart;
-    const datasetMeta = chart.getDatasetMeta(0) || [];
+    const datasetMeta = chart.getDatasetMeta(0);
+    if (!datasetMeta?.data?.length) return;
 
     ctx.save();
     ctx.globalCompositeOperation = 'destination-over';

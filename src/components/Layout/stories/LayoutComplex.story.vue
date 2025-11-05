@@ -33,9 +33,15 @@
       <oxd-table-filter filter-title="System Users">
         <oxd-form>
           <oxd-form-row>
-            <oxd-grid :cols="4" class="orangehrm-filter-grid">
+            <oxd-grid
+              :cols="4"
+              class="orangehrm-filter-grid"
+            >
               <oxd-grid-item>
-                <oxd-input-field v-model="filters.username" label="Username" />
+                <oxd-input-field
+                  v-model="filters.username"
+                  label="Username"
+                />
               </oxd-grid-item>
               <oxd-grid-item>
                 <oxd-input-field
@@ -49,11 +55,15 @@
           </oxd-form-row>
           <oxd-divider />
           <oxd-form-actions>
-            <oxd-button display-type="secondary" label="Search" type="submit" />
+            <oxd-button
+              display-type="secondary"
+              label="Search"
+              type="submit"
+            />
           </oxd-form-actions>
         </oxd-form>
       </oxd-table-filter>
-      <br />
+      <br>
       <oxd-report-table
         :loading="isLoading"
         :headers="headers"
@@ -61,25 +71,46 @@
         :column-count="6"
       >
         <template #pagination>
-          <oxd-pagination :length="3" :max="10" />
+          <oxd-pagination
+            :length="3"
+            :max="10"
+          />
         </template>
       </oxd-report-table>
     </div>
     <template #user-actions>
       <li role="none">
-        <a href="#" role="menuitem" class="oxd-userdropdown-link">
-          <oxd-icon name="box-arrow-right" :with-container="false" />Logout
+        <a
+          href="#"
+          role="menuitem"
+          class="oxd-userdropdown-link"
+        >
+          <oxd-icon
+            name="box-arrow-right"
+            :with-container="false"
+          />Logout
         </a>
       </li>
     </template>
     <template #footer>
-      <oxd-text tag="p" class="orangehrm-copyright">OrangeHRM 5.0</oxd-text>
-      <oxd-text tag="p" class="orangehrm-copyright">
+      <oxd-text
+        tag="p"
+        class="orangehrm-copyright"
+      >
+        OrangeHRM 5.0
+      </oxd-text>
+      <oxd-text
+        tag="p"
+        class="orangehrm-copyright"
+      >
         &copy; 2005 - 2021
-        <a href="http://www.orangehrm.com" target="_blank">OrangeHRM, Inc</a>.
+        <a
+          href="http://www.orangehrm.com"
+          target="_blank"
+        >OrangeHRM, Inc</a>.
         All rights reserved.
       </oxd-text>
-      <br />
+      <br>
     </template>
   </oxd-layout>
 </template>

@@ -21,9 +21,12 @@
 
 <template>
   <ul>
-    <template v-for="item in items" :key="item._id">
+    <template
+      v-for="item in items"
+      :key="item._id"
+    >
       <li>{{ item.content }}</li>
-      <hr />
+      <hr>
     </template>
     <li>--</li>
   </ul>

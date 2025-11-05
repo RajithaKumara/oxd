@@ -31,7 +31,11 @@
         display-type="ghost-success"
         label="No, Cancel"
       />
-      <oxd-button size="medium" display-type="success" label="Yes, Delete" />
+      <oxd-button
+        size="medium"
+        display-type="success"
+        label="Yes, Delete"
+      />
     </oxd-alert>
 
     <oxd-alert
@@ -39,8 +43,16 @@
       type="warn"
       message="Are you sure you want to continue?"
     >
-      <oxd-button size="medium" display-type="ghost-warn" label="No, Cancel" />
-      <oxd-button size="medium" display-type="warn" label="Yes, Delete" />
+      <oxd-button
+        size="medium"
+        display-type="ghost-warn"
+        label="No, Cancel"
+      />
+      <oxd-button
+        size="medium"
+        display-type="warn"
+        label="Yes, Delete"
+      />
     </oxd-alert>
 
     <oxd-alert
@@ -53,7 +65,11 @@
         display-type="ghost-danger"
         label="No, Cancel"
       />
-      <oxd-button size="medium" display-type="danger" label="Yes, Delete" />
+      <oxd-button
+        size="medium"
+        display-type="danger"
+        label="Yes, Delete"
+      />
     </oxd-alert>
 
     <oxd-alert
@@ -61,8 +77,16 @@
       type="info"
       message="Are you sure you want to continue?"
     >
-      <oxd-button size="medium" display-type="ghost-info" label="No, Cancel" />
-      <oxd-button size="medium" display-type="info" label="Yes, Delete" />
+      <oxd-button
+        size="medium"
+        display-type="ghost-info"
+        label="No, Cancel"
+      />
+      <oxd-button
+        size="medium"
+        display-type="info"
+        label="Yes, Delete"
+      />
     </oxd-alert>
   </div>
 </template>

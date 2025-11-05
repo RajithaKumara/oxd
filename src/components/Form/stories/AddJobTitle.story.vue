@@ -21,13 +21,18 @@
 -->
 
 <template>
-  <oxd-text tag="h5">Add Job Title</oxd-text>
+  <oxd-text tag="h5">
+    Add Job Title
+  </oxd-text>
 
   <oxd-divider />
 
   <oxd-form>
     <oxd-form-row>
-      <oxd-input-field v-model="jobTitle.title" label="Job Title" />
+      <oxd-input-field
+        v-model="jobTitle.title"
+        label="Job Title"
+      />
     </oxd-form-row>
 
     <oxd-form-row>
@@ -73,7 +78,10 @@
   <oxd-divider />
 
   <oxd-form-actions>
-    <oxd-button display-type="ghost" label="Cancel" />
+    <oxd-button
+      display-type="ghost"
+      label="Cancel"
+    />
     <oxd-button
       class="orangehrm-left-space"
       display-type="secondary"

@@ -20,10 +20,15 @@
 -->
 
 <template>
-  <oxd-sheet type="pastel-white" :rounded="false">
+  <oxd-sheet
+    type="pastel-white"
+    :rounded="false"
+  >
     <oxd-sheet v-bind="$attrs">
-      <oxd-text type="card-title">Card Title</oxd-text>
-      <div :style="{width: '100px', height: '100px'}"></div>
+      <oxd-text type="card-title">
+        Card Title
+      </oxd-text>
+      <div :style="{width: '100px', height: '100px'}" />
     </oxd-sheet>
   </oxd-sheet>
 </template>

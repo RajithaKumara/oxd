@@ -22,24 +22,31 @@
 
 <template>
   <div>
-    <oxd-autocomplete-input v-model="selected" :create-options="callAPI">
+    <oxd-autocomplete-input
+      v-model="selected"
+      :create-options="callAPI"
+    >
       <template #beforeSelected="{data}">
         <img
           width="25"
           height="25"
           alt="orangehrm logo"
           :src="data.avatar_url"
-        />
+        >
       </template>
-      <template #afterSelected="{data}"> (Github ID : {{ data.id }}) </template>
+      <template #afterSelected="{data}">
+        (Github ID : {{ data.id }})
+      </template>
       <template #option="{data, text}">
         <oxd-checkbox-input />
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <span v-html="text"></span>
-        <div class="github-id">{{ data.id }}</div>
+        <span v-html="text" />
+        <div class="github-id">
+          {{ data.id }}
+        </div>
       </template>
     </oxd-autocomplete-input>
-    <br />
+    <br>
     <p>{{ selected }}</p>
   </div>
 </template>

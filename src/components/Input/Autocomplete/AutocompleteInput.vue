@@ -75,7 +75,7 @@
       v-if="multiple"
       :disabled="disabled"
       :readonly="readonly"
-      :selected="modelValue"
+      :selected="modelValue as Option[]"
       @chip-removed="onRemoveSelected"
     ></oxd-autocomplete-chips>
   </div>
@@ -83,6 +83,7 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue';
+import type {PropType} from 'vue';
 import debounce from '@/utils/debounce';
 import usei18n from '@/composables/usei18n';
 import type {Option, Position} from '../types';
@@ -110,7 +111,9 @@ export default defineComponent({
 
   props: {
     modelValue: {
-      type: [Object, Array],
+      type: [Object, Array, String] as PropType<
+        Option | Option[] | string | null
+      >,
       required: false,
       default: () => null,
     },
@@ -131,7 +134,9 @@ export default defineComponent({
       default: null,
     },
     createOptions: {
-      type: Function,
+      type: Function as PropType<
+        (searchTerm: string) => Option[] | Promise<Option[]>
+      >,
       required: true,
     },
     multiple: {
@@ -163,7 +168,7 @@ export default defineComponent({
 
   data() {
     return {
-      options: [],
+      options: [] as Option[],
       focused: false,
       loading: false,
       dropdownOpen: false,
@@ -272,29 +277,28 @@ export default defineComponent({
         this.$emit('update:modelValue', option);
       }
     },
-    search: debounce((vm, searchTerm: string) => {
-      new Promise((resolve) => {
-        if (vm.createOptions) {
-          resolve(vm.createOptions(searchTerm));
-        } else {
-          throw new Error('createOptions not defined');
-        }
-      })
-        .then((resolved) => {
-          if (resolved && Array.isArray(resolved)) {
-            if (resolved.length > 0) {
-              vm.options = resolved.slice(0, 5);
-            } else {
-              vm.options = [];
+    search: debounce(
+      (
+        vm: {
+          createOptions: (term: string) => Option[] | Promise<Option[]>;
+          options: Option[];
+          loading: boolean;
+        },
+        searchTerm: string,
+      ) => {
+        Promise.resolve(vm.createOptions(searchTerm))
+          .then((resolved) => {
+            if (!Array.isArray(resolved)) {
+              throw new Error('options returned are not array');
             }
-          } else {
-            throw new Error('options returned are not array');
-          }
-        })
-        .finally(() => {
-          vm.loading = false;
-        });
-    }, 800),
+            vm.options = resolved.slice(0, 5) as Option[];
+          })
+          .finally(() => {
+            vm.loading = false;
+          });
+      },
+      800,
+    ),
     onBlur() {
       this.pointer = -1;
       this.dropdownOpen = false;

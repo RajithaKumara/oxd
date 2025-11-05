@@ -31,7 +31,7 @@
       row-decorator="oxd-table-decorator-card"
       @click="onClick"
     />
-    <br />
+    <br>
     <p>{{ order }}</p>
   </div>
 </template>

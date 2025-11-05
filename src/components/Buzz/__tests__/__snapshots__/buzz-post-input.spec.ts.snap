@@ -1,8 +1,8 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`BuzzPostInput.vue > renders OXD BuzzPostInput 1`] = `
-"<div class=\\"oxd-buzz-post oxd-buzz-post--active\\" data-v-ec69d519=\\"\\"><textarea rows=\\"1\\" class=\\"oxd-buzz-post-input\\" data-v-ec69d519=\\"\\"></textarea>
-  <div class=\\"oxd-buzz-post-slot\\" data-v-ec69d519=\\"\\"></div>
+"<div data-v-ec69d519="" class="oxd-buzz-post oxd-buzz-post--active"><textarea data-v-ec69d519="" rows="1" class="oxd-buzz-post-input"></textarea>
+  <div data-v-ec69d519="" class="oxd-buzz-post-slot"></div>
 </div>
 <!--v-if-->"
 `;

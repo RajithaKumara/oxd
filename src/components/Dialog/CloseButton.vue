@@ -20,7 +20,9 @@
 -->
 
 <template>
-  <button class="oxd-dialog-close-button">×</button>
+  <button class="oxd-dialog-close-button">
+    ×
+  </button>
 </template>
 
 <script lang="ts">

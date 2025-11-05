@@ -23,16 +23,24 @@
   <div class="orangehrm-dashboard">
     <oxd-grid :cols="3">
       <oxd-grid-item>
-        <oxd-sheet :gutters="false" class="orangehrm-dashboard-widget">
-          <oxd-text type="card-title">Employee Distribution</oxd-text>
+        <oxd-sheet
+          :gutters="false"
+          class="orangehrm-dashboard-widget"
+        >
+          <oxd-text type="card-title">
+            Employee Distribution
+          </oxd-text>
           <oxd-divider />
           <div class="orangehrm-dashboard-widget-body">
-            <oxd-pie-chart :data="dataset"></oxd-pie-chart>
+            <oxd-pie-chart :data="dataset" />
           </div>
         </oxd-sheet>
       </oxd-grid-item>
       <oxd-grid-item>
-        <oxd-sheet :gutters="false" class="orangehrm-dashboard-widget">
+        <oxd-sheet
+          :gutters="false"
+          class="orangehrm-dashboard-widget"
+        >
           <oxd-text type="card-title">
             Employee Distribution (Custom)
           </oxd-text>
@@ -44,13 +52,18 @@
               :custom-legend="true"
               :custom-tooltip="true"
               wrapper-classes="emp-distrib-chart"
-            ></oxd-pie-chart>
+            />
           </div>
         </oxd-sheet>
       </oxd-grid-item>
       <oxd-grid-item>
-        <oxd-sheet :gutters="false" class="orangehrm-dashboard-widget">
-          <oxd-text type="card-title"> Time at work </oxd-text>
+        <oxd-sheet
+          :gutters="false"
+          class="orangehrm-dashboard-widget"
+        >
+          <oxd-text type="card-title">
+            Time at work
+          </oxd-text>
           <oxd-divider />
           <div class="orangehrm-dashboard-widget-body">
             <oxd-bar-chart
@@ -58,7 +71,7 @@
               :grid="false"
               :y-axsis="false"
               :aspect-ratio="false"
-            ></oxd-bar-chart>
+            />
           </div>
         </oxd-sheet>
       </oxd-grid-item>

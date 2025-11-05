@@ -21,7 +21,7 @@
 
 <template>
   <tfoot class="oxd-table-footer">
-    <slot></slot>
+    <slot />
   </tfoot>
 </template>
 

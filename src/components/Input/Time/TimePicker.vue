@@ -85,7 +85,7 @@ import Input from '@/components/Input/Input.vue';
 import IconButton from '@/components/Button/Icon.vue';
 import {defineComponent, reactive, toRefs, watchEffect} from 'vue';
 
-interface State {
+export interface TimePickerState {
   hour: string;
   minute: string;
   period: string;
@@ -115,7 +115,7 @@ export default defineComponent({
   emits: ['update:modelValue'],
 
   setup(props, context) {
-    const state: State = reactive({
+    const state: TimePickerState = reactive({
       hour: '01',
       minute: '00',
       period: 'AM',
@@ -142,12 +142,12 @@ export default defineComponent({
       setValue(input, type);
     };
 
-    const increment = (step: number, type: keyof State) => {
+    const increment = (step: number, type: keyof TimePickerState) => {
       const input = parseInt(state[type]);
       setValue(input + step, type);
     };
 
-    const decrement = (step: number, type: keyof State) => {
+    const decrement = (step: number, type: keyof TimePickerState) => {
       const input = parseInt(state[type]);
       setValue(input - step, type);
     };

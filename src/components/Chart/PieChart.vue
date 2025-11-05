@@ -149,70 +149,81 @@ export default defineComponent({
       ],
     }));
 
-    const options = computed<ChartOptions<'pie'>>(() => ({
-      responsive: props.responsive,
-      maintainAspectRatio: !!props.aspectRatio,
-      aspectRatio:
-        typeof props.aspectRatio === 'number' ? props.aspectRatio : 1,
-      cutout: props.cutout,
-      borderWidth: props.data.filter((item) => item.value).length > 1,
-      plugins: {
-        legend: {
-          ...(props.legend && props.legend),
-          align: props.legend?.align ?? 'center',
-          position: props.legend?.position ?? 'bottom',
-          display: props.customLegend ? false : props.legend?.display,
-        },
-        tooltip: {
-          ...(props.tooltip && props.tooltip),
-          caretSize: 0,
-          backgroundColor: 'rgba(255, 255, 255, 1)',
-          enabled: props.customTooltip ? false : props.tooltip?.enabled,
-          callbacks: {
-            label: (ctx) => {
-              const {dataset, dataIndex} = ctx;
-              const value = dataset.data[dataIndex];
-              const total = dataset.data.reduce((acc, value) => acc + value, 0);
-              const percentage = (value / total) * 100;
-              return `${ctx.label} ${value} (${percentage.toFixed(2)}%)`;
+    const options = computed<ChartOptions<'pie'>>(() => {
+      const hasMultipleSegments =
+        props.data.filter((item) => item.value).length > 1;
+      const animationOptions: ChartOptions<'pie'>['animation'] =
+        props.animate === false
+          ? false
+          : ((props.animation ??
+              ({
+                delay: 200,
+                duration: 1000,
+                easing: 'easeOutSine',
+              } as Record<string, unknown>)) as ChartOptions<'pie'>['animation']);
+
+      return {
+        responsive: props.responsive,
+        maintainAspectRatio: !!props.aspectRatio,
+        aspectRatio:
+          typeof props.aspectRatio === 'number' ? props.aspectRatio : 1,
+        cutout: props.cutout,
+        borderWidth: hasMultipleSegments ? 1 : 0,
+        plugins: {
+          legend: {
+            ...(props.legend && props.legend),
+            align: props.legend?.align ?? 'center',
+            position: props.legend?.position ?? 'bottom',
+            display: props.customLegend ? false : props.legend?.display,
+          },
+          tooltip: {
+            ...(props.tooltip && props.tooltip),
+            caretSize: 0,
+            backgroundColor: 'rgba(255, 255, 255, 1)',
+            enabled: props.customTooltip ? false : props.tooltip?.enabled,
+            callbacks: {
+              label: (ctx) => {
+                const {dataset, dataIndex} = ctx;
+                const value = dataset.data[dataIndex] as number;
+                const total = (dataset.data as number[]).reduce(
+                  (acc, val) => acc + val,
+                  0,
+                );
+                const percentage = total === 0 ? 0 : (value / total) * 100;
+                return `${ctx.label} ${value} (${percentage.toFixed(2)}%)`;
+              },
+              labelColor: (ctx) => {
+                const {dataset, dataIndex} = ctx;
+                return {
+                  borderWidth: 0,
+                  borderRadius: 5,
+                  borderColor: '',
+                  backgroundColor: Array.isArray(dataset.backgroundColor)
+                    ? dataset.backgroundColor[dataIndex]
+                    : '',
+                };
+              },
+              labelTextColor: () => 'rgba(100, 114, 140, 1)',
             },
-            labelColor: (ctx) => {
-              const {dataset, dataIndex} = ctx;
-              return {
-                borderWidth: 0,
-                borderRadius: 5,
-                borderColor: '',
-                backgroundColor: Array.isArray(dataset.backgroundColor)
-                  ? dataset.backgroundColor[dataIndex]
-                  : '',
-              };
+          },
+          title: {
+            display: !!props.title,
+            text: props.title,
+          },
+          oxdPieChartTooltip: props.customTooltip,
+        },
+        animation: animationOptions,
+        // fixes animation issue in responsive mode
+        //https://github.com/chartjs/Chart.js/issues/10342
+        transitions: {
+          resize: {
+            animation: {
+              duration: 400,
             },
-            labelTextColor: () => 'rgba(100, 114, 140, 1)',
           },
         },
-        title: {
-          display: !!props.title,
-          text: props.title,
-        },
-        oxdPieChartTooltip: props.customTooltip,
-      },
-      animation: !props.animate
-        ? false
-        : props.animation ?? {
-            delay: 200,
-            duration: 1000,
-            easing: 'easeOutSine',
-          },
-      // fixes animation issue in responsive mode
-      //https://github.com/chartjs/Chart.js/issues/10342
-      transitions: {
-        resize: {
-          animation: {
-            duration: 400,
-          },
-        },
-      },
-    }));
+      };
+    });
 
     const renderChart = (destroy: boolean) => {
       if (!chartElm.value) return;

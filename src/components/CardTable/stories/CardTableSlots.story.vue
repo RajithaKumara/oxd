@@ -32,7 +32,7 @@
       @click="onClick"
     />
   </div>
-  <br />
+  <br>
   <div>{{ checkedItems }}</div>
 </template>
 

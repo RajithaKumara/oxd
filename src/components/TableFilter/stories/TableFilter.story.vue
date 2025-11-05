@@ -46,7 +46,10 @@
         <oxd-form-row>
           <oxd-grid :cols="4">
             <oxd-grid-item>
-              <oxd-input-field v-model="filters.username" label="Username" />
+              <oxd-input-field
+                v-model="filters.username"
+                label="Username"
+              />
             </oxd-grid-item>
             <oxd-grid-item>
               <oxd-input-field
@@ -87,7 +90,11 @@
         <oxd-divider />
 
         <oxd-form-actions>
-          <oxd-button display-type="secondary" label="Search" type="submit" />
+          <oxd-button
+            display-type="secondary"
+            label="Search"
+            type="submit"
+          />
           <oxd-button
             class="orangehrm-left-space"
             display-type="ghost"

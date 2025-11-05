@@ -20,10 +20,18 @@
 -->
 
 <template>
-  <oxd-tab-container v-model="selector" @click-tab="onClickTab">
-    <oxd-tab-panel key="login" name="Login">
+  <oxd-tab-container
+    v-model="selector"
+    @click-tab="onClickTab"
+  >
+    <oxd-tab-panel
+      key="login"
+      name="Login"
+    >
       <oxd-form class="orangehrm-form">
-        <oxd-text tag="h5">Login</oxd-text>
+        <oxd-text tag="h5">
+          Login
+        </oxd-text>
         <oxd-divider />
         <oxd-form-row>
           <oxd-input-field
@@ -42,7 +50,10 @@
         </oxd-form-row>
 
         <div class="orangehrm-form-footer">
-          <oxd-button display-type="secondary" label="Login" />
+          <oxd-button
+            display-type="secondary"
+            label="Login"
+          />
           <oxd-button
             display-type="ghost"
             label="Register"
@@ -51,9 +62,14 @@
         </div>
       </oxd-form>
     </oxd-tab-panel>
-    <oxd-tab-panel key="register" name="Register">
+    <oxd-tab-panel
+      key="register"
+      name="Register"
+    >
       <oxd-form class="orangehrm-form">
-        <oxd-text tag="h5">Register</oxd-text>
+        <oxd-text tag="h5">
+          Register
+        </oxd-text>
         <oxd-divider />
         <oxd-form-row>
           <oxd-input-field
@@ -87,7 +103,10 @@
         </oxd-form-row>
 
         <div class="orangehrm-form-footer">
-          <oxd-button display-type="secondary" label="Register" />
+          <oxd-button
+            display-type="secondary"
+            label="Register"
+          />
           <oxd-button
             display-type="ghost"
             label="Login"

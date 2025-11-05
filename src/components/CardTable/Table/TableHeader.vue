@@ -20,8 +20,11 @@
 -->
 
 <template>
-  <div class="oxd-table-header" role="rowgroup">
-    <slot></slot>
+  <div
+    class="oxd-table-header"
+    role="rowgroup"
+  >
+    <slot />
   </div>
 </template>
 

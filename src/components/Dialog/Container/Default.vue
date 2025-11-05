@@ -22,7 +22,7 @@
 <template>
   <div class="oxd-dialog-container-default">
     <div class="oxd-dialog-container-default--inner">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>
