@@ -20,13 +20,16 @@
 -->
 
 <template>
-  <div role="alert" class="oxd-color-picker">
+  <div
+    role="alert"
+    class="oxd-color-picker"
+  >
     <div
       class="oxd-color-picker-indicator"
       :style="indicatorStyles"
       @mousedown.prevent="captureOn"
       @touchstart.prevent="captureOn"
-    ></div>
+    />
     <canvas
       ref="colorPalette"
       width="228"
@@ -36,19 +39,22 @@
       @touchmove.prevent="pickColor"
       @mousedown.prevent="captureOn"
       @touchstart.prevent="captureOn"
-    ></canvas>
+    />
     <input
       :value="hue"
       class="oxd-color-picker-range"
       type="range"
       max="359"
       @change="onHueChange"
-    />
+    >
     <oxd-label
       :label="t('general.hex', 'HEX')"
       class="oxd-color-picker-label"
     />
-    <oxd-input :value="modelValue" @update:model-value="onHexInput" />
+    <oxd-input
+      :value="modelValue"
+      @update:model-value="onHexInput"
+    />
   </div>
 </template>
 

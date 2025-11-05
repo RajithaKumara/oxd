@@ -20,7 +20,11 @@
 -->
 
 <template>
-  <hr :class="classes" role="separator" :aria-orientation="areaOrientation" />
+  <hr
+    :class="classes"
+    role="separator"
+    :aria-orientation="areaOrientation"
+  >
 </template>
 
 <script lang="ts">

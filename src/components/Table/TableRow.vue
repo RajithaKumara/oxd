@@ -21,7 +21,7 @@
 
 <template>
   <tr :class="classes">
-    <slot></slot>
+    <slot />
   </tr>
 </template>
 

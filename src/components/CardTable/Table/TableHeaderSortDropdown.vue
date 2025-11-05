@@ -33,7 +33,10 @@
       :class="classes"
       role="dropdown"
     >
-      <ul role="menu" @click.stop="closeDropdown">
+      <ul
+        role="menu"
+        @click.stop="closeDropdown"
+      >
         <li
           class="oxd-table-header-sort-dropdown-item"
           @click="$emit('order', 'ASC')"

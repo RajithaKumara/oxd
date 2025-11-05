@@ -20,7 +20,11 @@
 -->
 
 <template>
-  <div ref="tableRef" :class="classes" @fullscreenchange="onFullScreenChange">
+  <div
+    ref="tableRef"
+    :class="classes"
+    @fullscreenchange="onFullScreenChange"
+  >
     <div class="oxd-report-table-header">
       <div class="oxd-report-table-header--toggable">
         <oxd-icon-button
@@ -43,13 +47,16 @@
             @click="scrollRight"
           />
         </template>
-        <slot name="toggable"></slot>
+        <slot name="toggable" />
       </div>
       <div class="oxd-report-table-header--pagination">
-        <slot name="pagination"></slot>
+        <slot name="pagination" />
       </div>
     </div>
-    <div v-if="loading" class="oxd-report-table-loader">
+    <div
+      v-if="loading"
+      class="oxd-report-table-loader"
+    >
       <oxd-loading-spinner />
     </div>
     <v-grid
@@ -65,9 +72,9 @@
       :col-size="colSize"
       :row-definitions="rowDefinitions"
       v-bind="$attrs"
-    ></v-grid>
+    />
     <div class="oxd-report-table-footer">
-      <slot name="footer"></slot>
+      <slot name="footer" />
     </div>
   </div>
 </template>
@@ -193,9 +200,9 @@ export default defineComponent({
       return false;
     });
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     const rowDefinitions = computed<any[]>(() => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+       
       return props.items.map((item: any, index: number) => {
         return {type: 'rgRow', index, size: parseInt(item?._rows) * 32};
       });

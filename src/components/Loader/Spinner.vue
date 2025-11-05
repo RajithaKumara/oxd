@@ -21,7 +21,7 @@
 
 <template>
   <div :class="classes">
-    <div class="oxd-loading-spinner"></div>
+    <div class="oxd-loading-spinner" />
   </div>
 </template>
 

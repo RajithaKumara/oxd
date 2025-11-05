@@ -20,7 +20,10 @@
 -->
 
 <template>
-  <oxd-dropdown-menu class="oxd-table-dropdown" @click="noOp">
+  <oxd-dropdown-menu
+    class="oxd-table-dropdown"
+    @click="noOp"
+  >
     <oxd-icon-button name="three-dots-vertical" />
     <template #content>
       <li
@@ -29,7 +32,9 @@
         class="oxd-table-dropdown-item"
         @click="onClick($event, option.context)"
       >
-        <oxd-text tag="p">{{ option.label }}</oxd-text>
+        <oxd-text tag="p">
+          {{ option.label }}
+        </oxd-text>
       </li>
     </template>
   </oxd-dropdown-menu>

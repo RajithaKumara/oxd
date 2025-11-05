@@ -20,7 +20,12 @@
 -->
 
 <template>
-  <component :is="tag" :class="classes"><slot></slot></component>
+  <component
+    :is="tag"
+    :class="classes"
+  >
+    <slot />
+  </component>
 </template>
 
 <script lang="ts">

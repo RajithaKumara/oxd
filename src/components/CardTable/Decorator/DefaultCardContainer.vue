@@ -20,7 +20,7 @@
 -->
 
 <template>
-  <component :is="card"></component>
+  <component :is="card" />
 </template>
 
 <script lang="ts">

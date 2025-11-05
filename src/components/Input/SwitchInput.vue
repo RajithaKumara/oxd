@@ -33,8 +33,11 @@
         @focus="onFocus"
         @blur="onBlur"
         @change="onChange"
+      >
+      <span
+        :class="classes"
+        :style="style"
       />
-      <span :class="classes" :style="style"></span>
       <template v-if="labelPosition === 'right'">
         {{ optionLabel }}
       </template>
@@ -49,7 +52,7 @@ import {LABEL_POSITIONS, RIGHT} from './types';
 
 export interface State {
   focused: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   checkedProxy: any;
 }
 

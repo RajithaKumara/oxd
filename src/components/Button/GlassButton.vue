@@ -20,9 +20,19 @@
 -->
 
 <template>
-  <button type="button" :class="btnClasses" :disabled="disabled">
-    <span v-if="icon" :class="iconClasses"></span>
-    <slot v-else name="icon"></slot>
+  <button
+    type="button"
+    :class="btnClasses"
+    :disabled="disabled"
+  >
+    <span
+      v-if="icon"
+      :class="iconClasses"
+    />
+    <slot
+      v-else
+      name="icon"
+    />
     {{ label }}
   </button>
 </template>

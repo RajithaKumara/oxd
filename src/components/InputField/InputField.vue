@@ -35,8 +35,14 @@
       :model-value="modelValue"
       @update:model-value="$emit('update:modelValue', $event)"
     >
-      <template v-for="(_, name) in $slots" #[name]="slotData">
-        <slot :name="name" v-bind="slotData" />
+      <template
+        v-for="(_, name) in $slots"
+        #[name]="slotData"
+      >
+        <slot
+          :name="name"
+          v-bind="slotData"
+        />
       </template>
     </component>
   </oxd-input-group>
@@ -122,7 +128,7 @@ export default defineComponent({
       },
     },
     rules: {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+       
       type: Array as PropType<any>,
       required: false,
       default: () => [],

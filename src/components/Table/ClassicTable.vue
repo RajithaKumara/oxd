@@ -22,21 +22,27 @@
 <template>
   <oxd-table>
     <colgroup>
-      <col v-if="selectable" :style="{width: selector.width}" />
+      <col
+        v-if="selectable"
+        :style="{width: selector.width}"
+      >
       <col
         v-for="header in headers"
         :key="JSON.stringify(header)"
         :style="{width: header.width}"
-      />
+      >
     </colgroup>
     <oxd-thead>
       <oxd-tr>
-        <oxd-th v-if="selectable" class="oxd-padding-cell oxd-table-th">
+        <oxd-th
+          v-if="selectable"
+          class="oxd-padding-cell oxd-table-th"
+        >
           <input
             v-model="selectedAll"
             type="checkbox"
             @change="onChangeSelectAll"
-          />
+          >
         </oxd-th>
         <oxd-th
           v-for="header in headers"
@@ -55,13 +61,16 @@
         :clickable="clickable"
         @click="onClick(item)($event)"
       >
-        <oxd-td v-if="selectable" class="oxd-padding-cell">
+        <oxd-td
+          v-if="selectable"
+          class="oxd-padding-cell"
+        >
           <input
             v-model="checkedItems"
             type="checkbox"
             :value="index"
             @click="onClickCheckbox(item, $event)"
-          />
+          >
         </oxd-td>
         <oxd-td
           v-for="header in headers"
@@ -73,7 +82,7 @@
       </oxd-tr>
     </oxd-tbody>
 
-    <oxd-tfoot> </oxd-tfoot>
+    <oxd-tfoot />
   </oxd-table>
 </template>
 
@@ -157,13 +166,13 @@ export default defineComponent({
   },
 
   methods: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     onClick(item: any) {
       return (e: Event) => {
         this.$emit('click', {item, native: e});
       };
     },
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     onClickCheckbox(item: any, e: Event) {
       e.stopPropagation();
       this.$emit('clickCheckbox', {item, native: e});

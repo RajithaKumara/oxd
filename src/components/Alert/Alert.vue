@@ -20,17 +20,27 @@
 -->
 
 <template>
-  <div v-if="show" :class="classes" role="alert">
+  <div
+    v-if="show"
+    :class="classes"
+    role="alert"
+  >
     <div :class="contentClasses">
-      <oxd-icon :name="iconName" class="oxd-alert-content-icon" />
+      <oxd-icon
+        :name="iconName"
+        class="oxd-alert-content-icon"
+      />
 
-      <oxd-text tag="p" class="oxd-alert-content-text">
+      <oxd-text
+        tag="p"
+        class="oxd-alert-content-text"
+      >
         {{ message }}
       </oxd-text>
     </div>
 
     <div class="oxd-alert-action">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>

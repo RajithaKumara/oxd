@@ -20,10 +20,19 @@
 -->
 
 <template>
-  <ul class="oxd-chart-legend" @click.stop>
-    <li v-for="(dataPoint, index) in data" :key="JSON.stringify(dataPoint)">
+  <ul
+    class="oxd-chart-legend"
+    @click.stop
+  >
+    <li
+      v-for="(dataPoint, index) in data"
+      :key="JSON.stringify(dataPoint)"
+    >
       <template v-if="labelStyles[index]">
-        <span class="oxd-chart-legend-key" :style="keyStyles[index]"></span>
+        <span
+          class="oxd-chart-legend-key"
+          :style="keyStyles[index]"
+        />
         <oxd-text
           tag="span"
           :title="labels[index]"

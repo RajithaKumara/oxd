@@ -18,7 +18,7 @@
  */
 
 interface EventQueue {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   [key: string]: Array<(data: any) => void>;
 }
 
@@ -28,7 +28,7 @@ class EventBus {
     this.queue = {};
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   $on(name: string, callback: (data: any) => void) {
     this.queue[name] = this.queue[name] || [];
     this.queue[name].push(callback);
@@ -45,7 +45,7 @@ class EventBus {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   $emit(name: string, data: any) {
     if (this.queue[name]) {
       this.queue[name].forEach(function (callback) {

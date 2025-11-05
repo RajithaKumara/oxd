@@ -27,14 +27,17 @@
         alt="profile picture"
         class="oxd-userdropdown-img"
         :src="user.profImgSrc"
-      />
+      >
       <p class="oxd-userdropdown-name">
         {{ user.firstName }} {{ user.lastName }}
       </p>
-      <oxd-icon name="caret-down-fill" class="oxd-userdropdown-icon"></oxd-icon>
+      <oxd-icon
+        name="caret-down-fill"
+        class="oxd-userdropdown-icon"
+      />
     </span>
     <template #content>
-      <slot></slot>
+      <slot />
     </template>
   </oxd-dropdown-menu>
   <!-- User dropdown -->

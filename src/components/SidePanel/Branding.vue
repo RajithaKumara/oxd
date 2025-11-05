@@ -20,12 +20,28 @@
 -->
 
 <template>
-  <a class="oxd-brand" :class="classes" :href="url">
-    <div v-show="toggle" class="oxd-brand-logo">
-      <img alt="client brand logo" :src="logoSrc" />
+  <a
+    class="oxd-brand"
+    :class="classes"
+    :href="url"
+  >
+    <div
+      v-show="toggle"
+      class="oxd-brand-logo"
+    >
+      <img
+        alt="client brand logo"
+        :src="logoSrc"
+      >
     </div>
-    <div class="oxd-brand-banner" :class="classes">
-      <img alt="client brand banner" :src="bannerSrc" />
+    <div
+      class="oxd-brand-banner"
+      :class="classes"
+    >
+      <img
+        alt="client brand banner"
+        :src="bannerSrc"
+      >
     </div>
   </a>
 </template>

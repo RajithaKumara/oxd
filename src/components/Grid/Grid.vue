@@ -21,7 +21,7 @@
 
 <template>
   <div :class="className">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

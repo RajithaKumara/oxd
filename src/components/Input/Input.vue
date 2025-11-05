@@ -26,7 +26,7 @@
     @focus="onFocus"
     @blur="onBlur"
     @input="onInput"
-  />
+  >
 </template>
 
 <script lang="ts">

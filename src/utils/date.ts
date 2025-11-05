@@ -49,7 +49,7 @@ const parseDate = (
       return parsed;
     }
     return null;
-  } catch (error) {
+  } catch (_error) {
     return null;
   }
 };
@@ -61,7 +61,7 @@ const formatDate = (
 ): string | null => {
   try {
     return format(value, dateFormat.replace(/'/g, ''), options);
-  } catch (error) {
+  } catch (_error) {
     return '';
   }
 };

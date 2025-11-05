@@ -77,7 +77,7 @@ export default function useFormValidation(isLoading: Ref<boolean>) {
         });
       })
       .catch((reject) => {
-        // eslint-disable-next-line no-console
+         
         console.error(reject);
       });
   };

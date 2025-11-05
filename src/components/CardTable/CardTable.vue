@@ -21,16 +21,19 @@
 
 <template>
   <oxd-card-table-container>
-    <div v-if="loading" class="oxd-table-loader">
+    <div
+      v-if="loading"
+      class="oxd-table-loader"
+    >
       <oxd-loading-spinner />
     </div>
     <template v-else>
       <!-- oxd-card-table header start -->
-      <component :is="tableDeco.headerDecorator"></component>
+      <component :is="tableDeco.headerDecorator" />
       <!-- oxd-card-table header end -->
 
       <!-- oxd-card-table body start -->
-      <component :is="tableDeco.bodyDecorator"></component>
+      <component :is="tableDeco.bodyDecorator" />
       <!-- oxd-card-table body end -->
     </template>
   </oxd-card-table-container>

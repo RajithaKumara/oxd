@@ -25,7 +25,7 @@
     :class="{'--active': isActive}"
     @click="openSubmenu"
   >
-    <slot></slot>
+    <slot />
 
     <transition name="transition-fade-down">
       <ul

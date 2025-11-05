@@ -20,7 +20,10 @@
 -->
 
 <template>
-  <div v-if="showHeader" class="oxd-table-card-cell">
+  <div
+    v-if="showHeader"
+    class="oxd-table-card-cell"
+  >
     <div class="header">
       {{ header.title }}
     </div>

@@ -33,7 +33,7 @@
           :headers="defaultSlot"
           :items="item"
           :index="index"
-        ></oxd-card-cell>
+        />
       </oxd-card-tr>
     </div>
   </oxd-card-tbody>
@@ -93,7 +93,7 @@ export default defineComponent({
   },
 
   methods: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     onClick(item: any) {
       return (e: Event) => {
         emitter.emit(`${this.tableProps.tableId}-datatable:clickRow`, {

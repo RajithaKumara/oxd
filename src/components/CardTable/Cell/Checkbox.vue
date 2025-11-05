@@ -20,7 +20,10 @@
 -->
 
 <template>
-  <div class="oxd-table-card-cell-checkbox" @click.stop>
+  <div
+    class="oxd-table-card-cell-checkbox"
+    @click.stop
+  >
     <oxd-checkbox-input
       v-if="isSelectable"
       v-model="checkState"
@@ -28,7 +31,10 @@
       :disabled="isDisabled"
       @click="onClickCheckbox(item, $event)"
     />
-    <div v-else class="oxd-table-card-cell-hidden">
+    <div
+      v-else
+      class="oxd-table-card-cell-hidden"
+    >
       <oxd-checkbox-input />
     </div>
   </div>
@@ -63,7 +69,7 @@ export default defineComponent({
     const checkState = computed({
       get: () => {
         const itemIndex = tableProps.selected.findIndex(
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+           
           (item: any) => item === props.item,
         );
         return itemIndex > -1;
@@ -128,7 +134,7 @@ export default defineComponent({
   },
 
   methods: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     onClickCheckbox(item: any, e: Event) {
       emitter.emit(`${this.tableProps.tableId}-datatable:clickCheckboxCell`, {
         item,

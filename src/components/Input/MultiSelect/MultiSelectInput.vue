@@ -38,7 +38,7 @@
           v-if="modelValue.length > 0"
           name="afterSelected"
           :data="modelValue"
-        ></slot>
+        />
       </template>
     </oxd-select-text>
 
@@ -57,7 +57,10 @@
         :disabled="option._disabled || option._selected"
         @select="onSelect(option)"
       >
-        <slot name="option" :data="option"></slot>
+        <slot
+          name="option"
+          :data="option"
+        />
         <span v-if="!$slots['option']">{{ option.label }}</span>
       </oxd-select-option>
     </oxd-select-dropdown>
@@ -67,7 +70,7 @@
       :readonly="readonly"
       :selected="modelValue"
       @chip-removed="onRemoveSelected"
-    ></oxd-mutliselect-chips>
+    />
   </div>
 </template>
 

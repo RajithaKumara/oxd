@@ -20,14 +20,20 @@
 -->
 
 <template>
-  <li class="oxd-tree-node" :class="nodeClasses">
+  <li
+    class="oxd-tree-node"
+    :class="nodeClasses"
+  >
     <div
       v-if="showRoot"
       :ref="cuid"
       :class="nodeClasses"
       class="oxd-tree-node-wrapper"
     >
-      <span v-if="hasChildren" class="oxd-tree-node-toggle">
+      <span
+        v-if="hasChildren"
+        class="oxd-tree-node-toggle"
+      >
         <oxd-icon-button
           :name="isOpen ? 'chevron-up' : 'chevron-down'"
           role="none"
@@ -35,27 +41,36 @@
         />
       </span>
       <div class="oxd-tree-node-content">
-        <slot name="content" :node-data="currentNode"></slot>
+        <slot
+          name="content"
+          :node-data="currentNode"
+        />
         <template v-if="!$slots['content']">
           {{ data.name }}
         </template>
       </div>
     </div>
-    <div class="oxd-tree-node-liner" :style="lineStyles"></div>
+    <div
+      class="oxd-tree-node-liner"
+      :style="lineStyles"
+    />
     <transition
       v-if="hasChildren"
       :name="animation"
       @after-leave="onAnimationComplete"
     >
-      <ul v-if="isOpen" class="oxd-tree-node-child">
+      <ul
+        v-if="isOpen"
+        class="oxd-tree-node-child"
+      >
         <oxd-tree-node
           v-for="(child, index) in data.children"
           :key="child.cuid"
+          v-slots="$slots"
           :data="child"
           :animation="animation"
           :is-last="index + 1 === data.children.length"
-          v-slots="$slots"
-        ></oxd-tree-node>
+        />
       </ul>
     </transition>
   </li>

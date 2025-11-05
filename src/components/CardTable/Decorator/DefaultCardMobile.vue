@@ -28,21 +28,27 @@
       @click="onClick(item)($event)"
     >
       <oxd-card-tr :clickable="tableProps.clickable">
-        <div v-if="leftSlot.length != 0" class="card-item card-left">
+        <div
+          v-if="leftSlot.length != 0"
+          class="card-item card-left"
+        >
           <oxd-card-cell
             :items="item"
             :index="index"
             :headers="leftSlot"
-          ></oxd-card-cell>
+          />
         </div>
         <div class="card-center">
-          <div v-if="titleSlot.length != 0" class="card-header-slot">
+          <div
+            v-if="titleSlot.length != 0"
+            class="card-header-slot"
+          >
             <div class="card-item card-header-slot-content --left">
               <oxd-card-cell
                 :items="item"
                 :index="index"
                 :headers="titleSlot"
-              ></oxd-card-cell>
+              />
             </div>
             <div
               v-if="actionSlot.length != 0"
@@ -52,30 +58,39 @@
                 :items="item"
                 :index="index"
                 :headers="actionSlot"
-              ></oxd-card-cell>
+              />
             </div>
           </div>
-          <div v-if="defaultSlot.length != 0" class="card-item card-body-slot">
+          <div
+            v-if="defaultSlot.length != 0"
+            class="card-item card-body-slot"
+          >
             <oxd-card-cell
               :items="item"
               :index="index"
               :headers="defaultSlot"
-            ></oxd-card-cell>
+            />
           </div>
-          <div v-if="footerSlot.length != 0" class="card-item card-footer-slot">
+          <div
+            v-if="footerSlot.length != 0"
+            class="card-item card-footer-slot"
+          >
             <oxd-card-cell
               :items="item"
               :index="index"
               :headers="footerSlot"
-            ></oxd-card-cell>
+            />
           </div>
         </div>
-        <div v-if="rightSlot.length != 0" class="card-item card-right">
+        <div
+          v-if="rightSlot.length != 0"
+          class="card-item card-right"
+        >
           <oxd-card-cell
             :items="item"
             :index="index"
             :headers="rightSlot"
-          ></oxd-card-cell>
+          />
         </div>
       </oxd-card-tr>
     </div>
@@ -146,7 +161,7 @@ export default defineComponent({
   },
 
   methods: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     onClick(item: any) {
       return (e: Event) => {
         emitter.emit(`${this.tableProps.tableId}-datatable:clickRow`, {

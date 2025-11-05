@@ -20,13 +20,16 @@
 -->
 
 <template>
-  <div class="oxd-table-header-cell" role="columnheader">
-    <slot></slot>
+  <div
+    class="oxd-table-header-cell"
+    role="columnheader"
+  >
+    <slot />
     <oxd-card-th-sort
       v-if="order !== undefined"
       :order="order"
       @order="onOrder"
-    ></oxd-card-th-sort>
+    />
   </div>
 </template>
 

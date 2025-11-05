@@ -26,10 +26,13 @@
     @submit.prevent="onSubmit"
     @reset.prevent="onReset"
   >
-    <div v-if="loading" class="oxd-form-loader">
+    <div
+      v-if="loading"
+      class="oxd-form-loader"
+    >
       <oxd-loading-spinner />
     </div>
-    <slot></slot>
+    <slot />
   </form>
 </template>
 

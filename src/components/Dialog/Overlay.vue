@@ -20,8 +20,11 @@
 -->
 
 <template>
-  <div role="dialog" :class="classes">
-    <slot></slot>
+  <div
+    role="dialog"
+    :class="classes"
+  >
+    <slot />
   </div>
 </template>
 

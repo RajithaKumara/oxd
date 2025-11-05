@@ -24,7 +24,7 @@ export type ErrorField = {
   errors: string[];
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+ 
 export type Rule = (
   value?: any,
 ) => string | boolean | Promise<string | boolean>;

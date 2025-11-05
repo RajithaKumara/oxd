@@ -27,7 +27,11 @@
     type="button"
     @click="onClick"
   >
-    <oxd-icon :class="{'--disabled': disabled}" :name="name" :type="iconType" />
+    <oxd-icon
+      :class="{'--disabled': disabled}"
+      :name="name"
+      :type="iconType"
+    />
   </button>
   <oxd-icon
     v-else

@@ -34,7 +34,11 @@
       @keydown="onKeypress"
     >
       <template #afterInput>
-        <slot v-if="modelValue" name="afterSelected" :data="modelValue"></slot>
+        <slot
+          v-if="modelValue"
+          name="afterSelected"
+          :data="modelValue"
+        />
       </template>
     </oxd-select-text>
 
@@ -45,7 +49,10 @@
       :empty="computedOptions.length === 0"
       :empty-text="emptyText"
     >
-      <oxd-select-option v-if="showEmptySelector" @select="onClear">
+      <oxd-select-option
+        v-if="showEmptySelector"
+        @select="onClear"
+      >
         {{ placeholderText }}
       </oxd-select-option>
       <oxd-select-option
@@ -56,7 +63,10 @@
         :disabled="option._disabled || option._selected"
         @select="onSelect(option)"
       >
-        <slot name="option" :data="option"></slot>
+        <slot
+          name="option"
+          :data="option"
+        />
         <span v-if="!$slots['option']">{{ option.label }}</span>
       </oxd-select-option>
     </oxd-select-dropdown>

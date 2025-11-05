@@ -20,7 +20,10 @@
 -->
 
 <template>
-  <div :class="classes" @mousedown.prevent="onToggle">
+  <div
+    :class="classes"
+    @mousedown.prevent="onToggle"
+  >
     <div
       v-bind="$attrs"
       ref="oxdInput"
@@ -32,7 +35,7 @@
       {{ value }}
     </div>
     <div class="oxd-select-text--after">
-      <slot name="afterInput"></slot>
+      <slot name="afterInput" />
       <oxd-icon
         v-if="!disabled"
         :name="dropdownIcon"

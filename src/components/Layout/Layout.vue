@@ -29,8 +29,7 @@
         :menu-items="sidepanelMenuItems"
         :brand-banner-src="brandBannerSrc"
         @collapse="onCollapse"
-      >
-      </oxd-side-panel>
+      />
       <oxd-top-bar
         :user="user"
         :toggle="collapse"
@@ -39,13 +38,13 @@
         @collapse="onCollapse"
       >
         <template #topbar-header-right-area>
-          <slot name="topbar-header-right-area"></slot>
+          <slot name="topbar-header-right-area" />
         </template>
         <template #user-context>
-          <slot name="user-actions"></slot>
+          <slot name="user-actions" />
         </template>
         <template #nav-context>
-          <slot name="nav-actions"></slot>
+          <slot name="nav-actions" />
         </template>
       </oxd-top-bar>
     </div>
@@ -54,12 +53,12 @@
         class="oxd-layout-overlay"
         :show="collapse"
         @click="onCollapse"
-      ></oxd-overlay>
+      />
       <div class="oxd-layout-context">
-        <slot></slot>
+        <slot />
       </div>
       <div class="oxd-layout-footer">
-        <slot name="footer"></slot>
+        <slot name="footer" />
       </div>
     </div>
   </div>

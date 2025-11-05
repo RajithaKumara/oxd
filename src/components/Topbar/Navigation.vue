@@ -33,17 +33,15 @@
         :key="`nav-level1-${index + width}`"
         :menu-item="menuItem"
         :class="menuClasses[index]"
-      >
-      </oxd-navigation-link>
+      />
 
       <oxd-navigation-more
         v-if="hiddenMenuItems.length > 0"
         :menu-items="hiddenMenuItems"
-      >
-      </oxd-navigation-more>
+      />
 
       <div class="oxd-topbar-body-nav-slot">
-        <slot></slot>
+        <slot />
       </div>
     </ul>
   </nav>

@@ -22,9 +22,16 @@
 <template>
   <div class="oxd-progressbar">
     <div class="oxd-progressbar-wrapper">
-      <div :style="styles" :class="classes"></div>
+      <div
+        :style="styles"
+        :class="classes"
+      />
     </div>
-    <oxd-text v-if="showLabel" class="oxd-progressbar-text" tag="p">
+    <oxd-text
+      v-if="showLabel"
+      class="oxd-progressbar-text"
+      tag="p"
+    >
       {{ progressText }}
     </oxd-text>
   </div>

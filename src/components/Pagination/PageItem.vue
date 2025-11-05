@@ -21,10 +21,21 @@
 
 <template>
   <li>
-    <button type="button" :class="classes">
-      <oxd-icon v-if="previous" name="chevron-left" />
-      <oxd-icon v-else-if="next" name="chevron-right" />
-      <template v-else>{{ page }}</template>
+    <button
+      type="button"
+      :class="classes"
+    >
+      <oxd-icon
+        v-if="previous"
+        name="chevron-left"
+      />
+      <oxd-icon
+        v-else-if="next"
+        name="chevron-right"
+      />
+      <template v-else>
+        {{ page }}
+      </template>
     </button>
   </li>
 </template>

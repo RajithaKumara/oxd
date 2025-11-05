@@ -20,7 +20,10 @@
 -->
 
 <template>
-  <div v-click-outside="onFocusOut" class="oxd-time-wrapper">
+  <div
+    v-click-outside="onFocusOut"
+    class="oxd-time-wrapper"
+  >
     <div class="oxd-time-input">
       <oxd-input
         ref="oxdInput"
@@ -32,14 +35,18 @@
         @change="onTimeInput"
         @click="toggleDropdown"
       />
-      <oxd-icon :class="timeIconClasses" name="clock" @click="toggleDropdown" />
+      <oxd-icon
+        :class="timeIconClasses"
+        name="clock"
+        @click="toggleDropdown"
+      />
     </div>
     <oxd-time-picker
       v-if="open"
       :step="step"
       :model-value="modelValue"
       @update:model-value="$emit('update:modelValue', $event)"
-    ></oxd-time-picker>
+    />
   </div>
 </template>
 

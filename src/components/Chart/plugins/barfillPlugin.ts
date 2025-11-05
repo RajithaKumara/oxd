@@ -69,7 +69,7 @@ export const OxdBarChartFill: Plugin = {
     ctx.save();
     ctx.globalCompositeOperation = 'destination-over';
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     datasetMeta.data.map((segment: any) => {
       ctx.fillStyle = 'rgb(246, 245, 251)';
       roundRect(

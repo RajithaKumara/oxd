@@ -30,7 +30,10 @@
     @keydown.esc.prevent="onClose"
     @keydown.enter.prevent="onEnter"
   >
-    <div class="oxd-color-input-preview" :style="previewStyles"></div>
+    <div
+      class="oxd-color-input-preview"
+      :style="previewStyles"
+    />
     <transition name="transition-fade-down">
       <oxd-color-picker
         v-if="open"
@@ -38,7 +41,7 @@
         :class="dropdownClasses"
         @click.stop
         @update:model-value="$emit('update:modelValue', $event)"
-      ></oxd-color-picker>
+      />
     </transition>
   </div>
 </template>

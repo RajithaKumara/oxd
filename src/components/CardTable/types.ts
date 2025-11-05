@@ -82,7 +82,7 @@ export interface Action<T> {
 }
 
 export interface RowItem {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   [key: string]: any;
   isSelectable?: boolean;
   isDisabled?: boolean;

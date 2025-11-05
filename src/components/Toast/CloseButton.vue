@@ -21,7 +21,12 @@
 
 <template>
   <div class="oxd-toast-close-container">
-    <div :class="classes" role="button">×</div>
+    <div
+      :class="classes"
+      role="button"
+    >
+      ×
+    </div>
   </div>
 </template>
 

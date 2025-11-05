@@ -33,10 +33,14 @@
       @input="onInput"
     />
     <div class="oxd-buzz-post-slot">
-      <slot></slot>
+      <slot />
     </div>
   </div>
-  <oxd-text v-if="hasError" tag="span" class="oxd-input-field-error-message">
+  <oxd-text
+    v-if="hasError"
+    tag="span"
+    class="oxd-input-field-error-message"
+  >
     {{ message }}
   </oxd-text>
 </template>

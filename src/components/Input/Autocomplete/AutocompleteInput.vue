@@ -41,14 +41,14 @@
           v-if="!multiple && modelValue"
           name="beforeSelected"
           :data="modelValue"
-        ></slot>
+        />
       </template>
       <template #afterInput>
         <slot
           v-if="!multiple && modelValue"
           name="afterSelected"
           :data="modelValue"
-        ></slot>
+        />
       </template>
     </oxd-autocomplete-text-input>
 
@@ -65,9 +65,17 @@
         :disabled="option._disabled || option._selected"
         @select="onSelect(option)"
       >
-        <slot name="option" :data="option" :text="highlightedOptions[i]"></slot>
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <span v-if="!$slots['option']" v-html="highlightedOptions[i]"></span>
+        <slot
+          name="option"
+          :data="option"
+          :text="highlightedOptions[i]"
+        />
+        <!-- eslint-disable vue/no-v-html -->
+        <span
+          v-if="!$slots['option']"
+          v-html="highlightedOptions[i]"
+        />
+        <!-- eslint-enable vue/no-v-html -->
       </oxd-autocomplete-option>
     </oxd-autocomplete-dropdown>
 
@@ -77,7 +85,7 @@
       :readonly="readonly"
       :selected="modelValue as Option[]"
       @chip-removed="onRemoveSelected"
-    ></oxd-autocomplete-chips>
+    />
   </div>
 </template>
 

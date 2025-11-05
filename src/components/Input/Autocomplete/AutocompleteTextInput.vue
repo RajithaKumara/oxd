@@ -20,9 +20,12 @@
 -->
 
 <template>
-  <div :class="classes" :style="style">
+  <div
+    :class="classes"
+    :style="style"
+  >
     <div class="oxd-autocomplete-text-input--before">
-      <slot name="beforeInput"></slot>
+      <slot name="beforeInput" />
     </div>
     <input
       v-bind="$attrs"
@@ -30,9 +33,9 @@
       :readonly="readonly"
       @focus="onFocus"
       @blur="onBlur"
-    />
+    >
     <div class="oxd-autocomplete-text-input--after">
-      <slot name="afterInput"></slot>
+      <slot name="afterInput" />
       <oxd-icon
         v-if="clear"
         class="oxd-autocomplete-text-input--clear"

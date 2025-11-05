@@ -20,24 +20,38 @@
 -->
 
 <template>
-  <div v-if="show" :class="classes" aria-live="assertive" @click="onClickToast">
+  <div
+    v-if="show"
+    :class="classes"
+    aria-live="assertive"
+    @click="onClickToast"
+  >
     <div class="oxd-toast-start">
       <slot name="icon">
         <oxd-toast-icon :type="type" />
       </slot>
       <slot>
         <div :class="contentClasses">
-          <oxd-text type="toast-title" class="oxd-toast-content-text">
+          <oxd-text
+            type="toast-title"
+            class="oxd-toast-content-text"
+          >
             {{ title }}
           </oxd-text>
-          <oxd-text type="toast-message" class="oxd-toast-content-text">
+          <oxd-text
+            type="toast-message"
+            class="oxd-toast-content-text"
+          >
             {{ message }}
           </oxd-text>
         </div>
       </slot>
     </div>
     <slot name="close">
-      <oxd-toast-close-button :type="type" @click="onClickClose" />
+      <oxd-toast-close-button
+        :type="type"
+        @click="onClickClose"
+      />
     </slot>
   </div>
 </template>

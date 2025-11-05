@@ -20,7 +20,10 @@
 -->
 
 <template>
-  <div role="alert" class="oxd-time-picker">
+  <div
+    role="alert"
+    class="oxd-time-picker"
+  >
     <div class="oxd-time-hour-input">
       <oxd-icon-button
         name="chevron-up"
@@ -68,11 +71,21 @@
     </div>
     <div class="oxd-time-period-input">
       <div class="oxd-time-period-label">
-        <input v-model="period" name="am" type="radio" value="AM" />
+        <input
+          v-model="period"
+          name="am"
+          type="radio"
+          value="AM"
+        >
         <label for="am">AM</label>
       </div>
       <div class="oxd-time-period-label">
-        <input v-model="period" name="pm" type="radio" value="PM" />
+        <input
+          v-model="period"
+          name="pm"
+          type="radio"
+          value="PM"
+        >
         <label for="pm">PM</label>
       </div>
     </div>

@@ -30,7 +30,10 @@
           @click="$emit('collapse')"
         />
         <span class="oxd-topbar-header-breadcrumb">
-          <oxd-text tag="h6" class="oxd-topbar-header-breadcrumb-module">
+          <oxd-text
+            tag="h6"
+            class="oxd-topbar-header-breadcrumb-module"
+          >
             {{ breadcrumb.moduleName }}
           </oxd-text>
           <oxd-text
@@ -42,19 +45,19 @@
           </oxd-text>
         </span>
       </div>
-      <slot name="topbar-header-right-area"></slot>
+      <slot name="topbar-header-right-area" />
       <!-- User Menu Area -->
       <div class="oxd-topbar-header-userarea">
         <ul>
           <oxd-user-dropdown :user="user">
-            <slot name="user-context"></slot>
+            <slot name="user-context" />
           </oxd-user-dropdown>
         </ul>
       </div>
     </div>
     <div :class="bodyClasses">
       <oxd-navigation :menu-items="menuItems">
-        <slot name="nav-context"></slot>
+        <slot name="nav-context" />
       </oxd-navigation>
     </div>
   </header>

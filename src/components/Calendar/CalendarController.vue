@@ -21,7 +21,10 @@
 
 <template>
   <div class="oxd-calendar-header">
-    <oxd-icon name="chevron-left" @click="gotoPreviousMonth"></oxd-icon>
+    <oxd-icon
+      name="chevron-left"
+      @click="gotoPreviousMonth"
+    />
     <ul class="oxd-calendar-selector">
       <oxd-calendar-dropdown
         :options="months"
@@ -30,8 +33,13 @@
         @select="onSelectMonth"
       >
         <div class="oxd-calendar-selector-month-selected">
-          <oxd-text tag="p">{{ months[modelValue.month] }}</oxd-text>
-          <oxd-icon name="caret-down-fill" :with-container="false" />
+          <oxd-text tag="p">
+            {{ months[modelValue.month] }}
+          </oxd-text>
+          <oxd-icon
+            name="caret-down-fill"
+            :with-container="false"
+          />
         </div>
       </oxd-calendar-dropdown>
       <oxd-calendar-dropdown
@@ -41,12 +49,20 @@
         @select="onSelectYear"
       >
         <div class="oxd-calendar-selector-year-selected">
-          <oxd-text tag="p">{{ modelValue.year }}</oxd-text>
-          <oxd-icon name="caret-down-fill" :with-container="false" />
+          <oxd-text tag="p">
+            {{ modelValue.year }}
+          </oxd-text>
+          <oxd-icon
+            name="caret-down-fill"
+            :with-container="false"
+          />
         </div>
       </oxd-calendar-dropdown>
     </ul>
-    <oxd-icon name="chevron-right" @click="gotoNextMonth"></oxd-icon>
+    <oxd-icon
+      name="chevron-right"
+      @click="gotoNextMonth"
+    />
   </div>
 </template>
 <script lang="ts">

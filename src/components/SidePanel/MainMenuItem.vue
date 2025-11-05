@@ -21,15 +21,21 @@
 
 <template>
   <li class="oxd-main-menu-item-wrapper">
-    <a :class="menuClasses" :href="url">
+    <a
+      :class="menuClasses"
+      :href="url"
+    >
       <oxd-icon
         :name="icon"
         type="svg"
         width="22"
         height="22"
         class="oxd-main-menu-item--icon"
-      ></oxd-icon>
-      <oxd-text tag="span" class="oxd-main-menu-item--name">
+      />
+      <oxd-text
+        tag="span"
+        class="oxd-main-menu-item--name"
+      >
         {{ name }}
       </oxd-text>
     </a>

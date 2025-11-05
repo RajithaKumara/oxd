@@ -40,7 +40,10 @@
       />
     </div>
     <transition name="transition-fade-down">
-      <div v-if="open" class="oxd-date-input-calendar">
+      <div
+        v-if="open"
+        class="oxd-date-input-calendar"
+      >
         <oxd-calendar
           v-bind="$attrs"
           v-model="dateSelected"
@@ -49,13 +52,22 @@
           @update:model-value="onDateSelected"
         >
           <div class="oxd-date-input-links">
-            <div class="oxd-date-input-link --today" @click="onClickToday">
+            <div
+              class="oxd-date-input-link --today"
+              @click="onClickToday"
+            >
               {{ t('general.today', 'Today') }}
             </div>
-            <div class="oxd-date-input-link --clear" @click="onClickClear">
+            <div
+              class="oxd-date-input-link --clear"
+              @click="onClickClear"
+            >
               {{ t('general.clear', 'Clear') }}
             </div>
-            <div class="oxd-date-input-link --close" @click="closeDropdown">
+            <div
+              class="oxd-date-input-link --close"
+              @click="closeDropdown"
+            >
               {{ t('general.close', 'Close') }}
             </div>
           </div>

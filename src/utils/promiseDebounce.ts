@@ -27,7 +27,7 @@
  *
  */
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
+ 
 export default function promiseDebounce(
   exec: (...args: any[]) => Promise<any>,
   interval: number,
@@ -46,4 +46,4 @@ export default function promiseDebounce(
     return new Promise((resolve) => resolves.push(resolve));
   };
 }
-/* eslint-enable @typescript-eslint/no-explicit-any */
+ 

@@ -28,14 +28,22 @@
           :name="labelIcon"
           class="oxd-input-group__label-icon"
         />
-        <oxd-label v-if="label" :label="label" :class="labelClasses" />
+        <oxd-label
+          v-if="label"
+          :label="label"
+          :class="labelClasses"
+        />
       </div>
     </slot>
     <div :class="wrapperClasses">
-      <slot></slot>
+      <slot />
     </div>
     <slot name="message">
-      <oxd-text v-if="message" :class="messageClasses" tag="span">
+      <oxd-text
+        v-if="message"
+        :class="messageClasses"
+        tag="span"
+      >
         {{ message }}
       </oxd-text>
     </slot>

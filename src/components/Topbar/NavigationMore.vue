@@ -20,15 +20,27 @@
 -->
 
 <template>
-  <oxd-dropdown-menu class="oxd-topbar-body-nav-tab" @dropdown:closed="onClose">
+  <oxd-dropdown-menu
+    class="oxd-topbar-body-nav-tab"
+    @dropdown:closed="onClose"
+  >
     <span class="oxd-topbar-body-nav-tab-item">
       {{ t('general.more', 'More') }}
-      <oxd-icon name="three-dots-vertical" :with-container="false" />
+      <oxd-icon
+        name="three-dots-vertical"
+        :with-container="false"
+      />
     </span>
     <template #content>
-      <div v-for="(menuItem, index) in menuItems" :key="`nav-level2-${index}`">
+      <div
+        v-for="(menuItem, index) in menuItems"
+        :key="`nav-level2-${index}`"
+      >
         <li @click="onClickMenu($event, menuItem, index)">
-          <a href="#" class="oxd-topbar-body-nav-tab-link --more">
+          <a
+            href="#"
+            class="oxd-topbar-body-nav-tab-link --more"
+          >
             {{ menuItem.name }}
             <oxd-icon
               v-show="menuItem.children.length > 0"

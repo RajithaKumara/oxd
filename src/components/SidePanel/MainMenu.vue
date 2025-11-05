@@ -29,7 +29,7 @@
         width="22"
         height="22"
         class="oxd-menu-icon"
-      ></oxd-icon>
+      />
       <oxd-input
         v-model="searchTerm"
         :placeholder="t('general.search', 'Search')"
@@ -42,7 +42,7 @@
         @click="onClickCollapse"
       />
     </div>
-    <hr class="oxd-main-menu-divider" />
+    <hr class="oxd-main-menu-divider">
   </div>
   <!-- Search -->
 
@@ -56,7 +56,7 @@
       :collapsed="toggle"
       :name="menuItem.name"
       :icon="menuItem.icon"
-    ></oxd-main-menu-item>
+    />
   </ul>
 </template>
 

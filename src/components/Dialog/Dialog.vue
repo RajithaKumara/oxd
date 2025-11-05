@@ -20,8 +20,16 @@
 -->
 
 <template>
-  <transition :name="computedTransition" appear>
-    <oxd-overlay role="dialog" centered :show="true" @click="onClickOverlay">
+  <transition
+    :name="computedTransition"
+    appear
+  >
+    <oxd-overlay
+      role="dialog"
+      centered
+      :show="true"
+      @click="onClickOverlay"
+    >
       <!--
     :aria-labelledby="'dialogTitle_' + id"
     :aria-describedby="'dialogDesc_' + id"
@@ -39,7 +47,7 @@
             class="oxd-dialog-close-button-position"
             @click="onClose"
           />
-          <slot></slot>
+          <slot />
         </oxd-sheet>
       </component>
     </oxd-overlay>

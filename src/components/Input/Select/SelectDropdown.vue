@@ -20,11 +20,14 @@
 -->
 
 <template>
-  <div role="listbox" class="oxd-select-dropdown">
+  <div
+    role="listbox"
+    class="oxd-select-dropdown"
+  >
     <oxd-select-option v-if="empty">
       {{ placeholderText }}
     </oxd-select-option>
-    <slot v-else></slot>
+    <slot v-else />
   </div>
 </template>
 

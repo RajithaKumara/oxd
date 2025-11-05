@@ -33,7 +33,7 @@ export const validatableMixin = defineComponent({
   },
 
   methods: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     validate(value?: any) {
       const errorBucket = [];
 
@@ -46,7 +46,7 @@ export const validatableMixin = defineComponent({
           // eslint-disable-next-line no-empty
         } else if (valid === true) {
         } else {
-          // eslint-disable-next-line no-console
+           
           console.error(
             `Rules should return a string or true, received '${typeof valid}'`,
           );

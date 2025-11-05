@@ -33,9 +33,16 @@
         @focus="onFocus"
         @blur="onBlur"
         @change="onChange"
-      />
-      <span :class="classes" :style="style" class="oxd-checkbox-input">
-        <oxd-icon class="oxd-checkbox-input-icon" :name="checkIcon" />
+      >
+      <span
+        :class="classes"
+        :style="style"
+        class="oxd-checkbox-input"
+      >
+        <oxd-icon
+          class="oxd-checkbox-input-icon"
+          :name="checkIcon"
+        />
       </span>
       <template v-if="labelPosition === 'right'">
         {{ optionLabel }}
@@ -52,7 +59,7 @@ import Icon from '@/components/Icon/Icon.vue';
 
 export interface State {
   focused: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   checkedProxy: any;
 }
 

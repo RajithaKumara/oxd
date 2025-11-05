@@ -39,7 +39,7 @@ export default function debounce<F extends Procedure>(
   let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
   return function (this: unknown, ...args: any[]) {
-    // eslint-disable-next-line  @typescript-eslint/no-this-alias
+     
     const self = this;
 
     const doLater = function () {

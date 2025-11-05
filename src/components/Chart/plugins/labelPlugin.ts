@@ -44,7 +44,7 @@ class Label {
       };
       if (point.x == null || point.y == null) return;
       const {x, y} = point as {x: number; y: number};
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+       
       const circumference = (this._element as any).circumference;
       if (circumference < 0.75) return;
       this._ctx.save();

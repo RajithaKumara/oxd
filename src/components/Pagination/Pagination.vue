@@ -20,7 +20,10 @@
 -->
 
 <template>
-  <nav role="navigation" aria-label="Pagination Navigation">
+  <nav
+    role="navigation"
+    aria-label="Pagination Navigation"
+  >
     <ul class="oxd-pagination__ul">
       <oxd-pagination-page-item
         v-if="showPrevious"
@@ -34,7 +37,11 @@
         :selected="page === currentPage"
         @click="onClickPage(page, $event)"
       />
-      <oxd-pagination-page-item v-if="showNext" next @click="onClickNext" />
+      <oxd-pagination-page-item
+        v-if="showNext"
+        next
+        @click="onClickNext"
+      />
     </ul>
   </nav>
 </template>
@@ -85,14 +92,14 @@ export default defineComponent({
     currentPage: {
       get(): number {
         if (this.current < 1 || this.current > this.length) {
-          // eslint-disable-next-line no-console
+           
           console.error('Invalid `current` prop');
         }
         return this.pagePointer;
       },
       set(newValue: number) {
         if (newValue < 1 || newValue > this.length) {
-          // eslint-disable-next-line no-console
+           
           console.error('Invalid assignment to `currentPage`');
         } else {
           this.pagePointer = newValue;
@@ -107,7 +114,7 @@ export default defineComponent({
     },
     pageItems(): Array<number> {
       if (this.currentPage < 1 || this.currentPage > this.length) {
-        // eslint-disable-next-line no-console
+         
         console.error('Invalid `current` prop');
       }
 
@@ -162,7 +169,7 @@ export default defineComponent({
       const range = [];
       from = from > 0 ? from : 1;
       if (from > to) {
-        // eslint-disable-next-line no-console
+         
         console.error('`from` is bigger than `to`');
       }
       for (let i = from; i <= to; i++) {

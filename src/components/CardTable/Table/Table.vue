@@ -20,8 +20,11 @@
 -->
 
 <template>
-  <div class="oxd-table" role="table">
-    <slot></slot>
+  <div
+    class="oxd-table"
+    role="table"
+  >
+    <slot />
   </div>
 </template>
 

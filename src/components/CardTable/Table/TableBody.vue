@@ -20,8 +20,11 @@
 -->
 
 <template>
-  <div :class="classes" role="rowgroup">
-    <slot></slot>
+  <div
+    :class="classes"
+    role="rowgroup"
+  >
+    <slot />
   </div>
 </template>
 

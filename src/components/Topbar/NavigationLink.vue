@@ -24,14 +24,20 @@
     v-if="menuItem.children.length === 0"
     @click="onClickMenu($event, menuItem)"
   >
-    <a class="oxd-topbar-body-nav-tab-item" href="#">
+    <a
+      class="oxd-topbar-body-nav-tab-item"
+      href="#"
+    >
       {{ menuItem.name }}
     </a>
   </li>
   <oxd-dropdown-menu v-else>
     <span class="oxd-topbar-body-nav-tab-item">
       {{ menuItem.name }}
-      <oxd-icon name="chevron-down" :with-container="false" />
+      <oxd-icon
+        name="chevron-down"
+        :with-container="false"
+      />
     </span>
     <template #content>
       <li
@@ -39,7 +45,11 @@
         :key="`nav-level2-${index}`"
         @click="onClickMenu($event, subMenuItem)"
       >
-        <a href="#" role="menuitem" class="oxd-topbar-body-nav-tab-link">
+        <a
+          href="#"
+          role="menuitem"
+          class="oxd-topbar-body-nav-tab-link"
+        >
           {{ subMenuItem.name }}
         </a>
       </li>

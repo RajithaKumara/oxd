@@ -1,3 +1,4 @@
+import type {Locale} from 'date-fns';
 import {enUS} from 'date-fns/locale';
 
 export type LangPack = {

@@ -28,9 +28,13 @@
     @focus="onFocus"
     @blur="onBlur"
     @input="onInput"
-  />
-  <div :class="classes" :style="style" @click="onClick">
-    <slot></slot>
+  >
+  <div
+    :class="classes"
+    :style="style"
+    @click="onClick"
+  >
+    <slot />
     <template v-if="!$slots.default">
       <div
         v-if="buttonLabel"
