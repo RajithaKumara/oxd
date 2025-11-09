@@ -50,6 +50,9 @@
     "vitest": "^1.6.0",
     "vue-tsc": "^2.0.28"
   },
+  "resolutions": {
+    "form-data": "4.0.4"
+  },
   "main": "index.umd.js",
   "unpkg": "index.umd.js",
   "module": "index.es.js",
@@ -59,5 +62,5 @@
     "node": ">=18.12.1",
     "yarn": ">=3.3.1"
   },
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.11.0"
 }
